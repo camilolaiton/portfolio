@@ -123,7 +123,7 @@ class Header extends Component {
                             {networks}
                         </div>
                         
-                        <a href='/DL Camilo Laiton - Resume.pdf' className="btn btn-outline-light btn-rounded i-cv" data-mdb-ripple-color="dark" role="button" download>
+                        <a href='https://raw.githubusercontent.com/camilolaiton/portfolio/master/public/DL%20Camilo%20Laiton%20-%20Resume.pdf' className="btn btn-outline-light btn-rounded i-cv" target="_blank" rel="noreferrer" data-mdb-ripple-color="dark" role="button" download>
                             Click to download my CV
                         </a>
                     </div>
