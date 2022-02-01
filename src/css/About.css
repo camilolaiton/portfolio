@@ -1,0 +1,86 @@
+.about {
+    background-color: #858585;
+    overflow: hidden;
+}
+
+.about h1 {
+    color: white;
+    letter-spacing: 3px;
+    font-size: large;
+    font-family: "opensans-bold", sans-serif;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    /* font-weight: 700; */
+}
+
+.about-info {
+    padding-top: 20px;
+    color: white;
+    width: 75%;
+    text-align: justify;
+}
+
+.hr {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 0;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.a-item {
+    color: white;
+    font-weight: bolder;
+}
+
+.a-item:hover {
+    color: yellow;
+}
+
+.language-title {
+    color: white;
+    letter-spacing: 1px;
+    font-size: medium;
+    font-family: "opensans-bold", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 2rem;
+}
+
+.language-subtitle {
+    color: rgba(255, 255, 255, 0.767);
+    letter-spacing: 1px;
+    font-size: small;
+    font-family: "opensans-bold", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.honors {
+    padding-top: 20px;
+    color: white;
+    width: 75%;
+    text-align: justify;
+}
+
+.certificates {
+    padding-top: 20px;
+    color: white;
+    width: 75%;
+    text-align: justify;
+}
+
+.i-certificate {
+    color: white;
+    font-weight: bold;
+}
+
+.i-certificate:hover {
+    color: yellow;
+    /* font-weight: bold; */
+}

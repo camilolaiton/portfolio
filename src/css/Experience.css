@@ -1,0 +1,38 @@
+.itemTitle {
+    font-size: large;
+    text-align: justify;
+}
+
+.workItemTitle {
+    font-size: x-large;
+    text-align: justify;
+}
+
+.itemSubtitle {
+    font-size: 15px;
+    text-align: justify;
+    margin-top: 7px;
+}
+
+.dateTimeElement {
+    color: white;
+}
+
+.tutorTimeElement {
+    color: black;
+    font-weight: bolder;
+}
+
+.itemHr {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    margin-left: 0%;
+    margin-right: 0%;
+    border: 0;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.technologyTimeElement {
+    margin-top: 3px;
+    margin-bottom: -20px;
+}

@@ -1,0 +1,22 @@
+.footer {
+    background-color: #474545;
+    overflow: hidden;
+}
+
+.social-links {
+	margin-top: 20px;
+}
+
+.copyright {
+    letter-spacing: 2px;
+    font-family: "opensans-bold", sans-serif;
+    font-weight: 550;
+    color: white;
+}
+
+/* .navbar {
+    position: fixed;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
+} */
