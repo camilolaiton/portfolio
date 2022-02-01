@@ -14,7 +14,7 @@ class Skills extends Component {
                 <p
                   className="text-center skills-name"
                 >
-                  {skills.name}
+                  {skills.name} 
                 </p>
               </div>
             </span>
