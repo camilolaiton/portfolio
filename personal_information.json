@@ -147,6 +147,7 @@
     },
     "research": [
       {
+        "id": "1",
         "startDate": "12/2019",
         "endDate": "12/2020",
         "topics": ["Deep Learning", "Traffic Management", "CNNs", "Simulation"],
@@ -197,9 +198,24 @@
             "url":"",
             "state":"Pending publication"
           }
+        ],
+        "images": [
+          {
+            "url": "images/undergrad_thesis/architecture.png",
+            "desc": "Proposed algorithm architecture."
+          },
+          {
+            "url": "images/undergrad_thesis/simulation.png",
+            "desc": "Simulation of the proposed solution using SUMO simulator."
+          },
+          {
+            "url": "images/undergrad_thesis/classification.png",
+            "desc": "Car classification using YoloV3 model trained with COCO dataset."
+          }
         ]
       },
       {
+        "id": "2",
         "startDate": "03/2020",
         "endDate": "10/2020",
         "topics": ["Deep Learning", "Brain Segmentation", "Transformers", "3D Segmentation"],
@@ -243,12 +259,40 @@
             "title": "Deep 3D neural network for brain structures segmentation using self-attention modules in MRI images",
             "url":"#",
             "state":"Pending publication"
+          },
+          {
+            "title": "Self-attention unet-based architecture for gray matter segmentation in brain imaging",
+            "url":"#",
+            "state":"Pending publication"
+          }
+        ],
+        "images": [
+          {
+            "url": "images/master_thesis/axial.gif",
+            "desc": "Segmented brain MRI in the axial plane using the proposed architecture."
+          },
+          {
+            "url": "images/master_thesis/coronal.gif",
+            "desc": "Segmented brain MRI in the coronal plane using the proposed architecture."
+          },
+          {
+            "url": "images/master_thesis/saggital.gif",
+            "desc": "Segmented brain MRI in the saggital plane using the proposed architecture."
+          },
+          {
+            "url": "images/master_thesis/proposed_architecture.jpg",
+            "desc": "Proposed 3D deep neural network architecture for the segmentation of 37 brain structures."
+          },
+          {
+            "url": "images/master_thesis/3d_brain.png",
+            "desc": "Segmented brain using the proposed architecture in a 3d visual representation."
           }
         ]
       },
       {
-        "startDate": "09/2020",
-        "endDate": "01/2021",
+        "id": "3",
+        "startDate": "09/2021",
+        "endDate": "01/2022",
         "topics": ["Rail Transportation", "Industry 4.0", "Systematic Literature Review"],
         "technologies": [
           {
@@ -281,6 +325,9 @@
             "url":"#",
             "state":"Pending publication"
           }
+        ],
+        "images": [
+          
         ]
       }
     ],
