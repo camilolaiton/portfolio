@@ -216,8 +216,8 @@
       },
       {
         "id": "2",
-        "startDate": "03/2020",
-        "endDate": "10/2020",
+        "startDate": "04/2021",
+        "endDate": "02/2022",
         "topics": ["Deep Learning", "Brain Segmentation", "Transformers", "3D Segmentation"],
         "technologies": [
           {
