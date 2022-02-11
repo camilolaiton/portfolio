@@ -32,7 +32,7 @@ class Header extends Component {
             var networks = this.props.socialInfo.map(function (network, nKey) {
             //   console.log(network);
               return (
-                  <div className='col-sm'>
+                  <div className='col-sm row-theme'>
                       <div className='row-sm'>
                         <span key={nKey } className="m-4">
                             <a href={network.url} target="_blank" rel="noopener noreferrer">

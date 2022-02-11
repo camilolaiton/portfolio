@@ -40,6 +40,11 @@
     color: yellow;
 }
 
+.languages-box {
+    text-align: center;
+    justify-content: center;
+}
+
 .language-title {
     color: white;
     letter-spacing: 1px;
@@ -83,4 +88,20 @@
 .i-certificate:hover {
     color: yellow;
     /* font-weight: bold; */
+}
+
+@media only screen and (max-width: 600px) {
+    .languages-box {
+        text-align: center;
+        justify-content: center;
+        padding-left: 30%;
+    }
+
+    .honors {
+        padding-left: 20%;
+    }
+
+    .certificates {
+        padding-left: 20%;
+    }
 }

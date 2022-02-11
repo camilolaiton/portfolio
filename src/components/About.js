@@ -73,7 +73,7 @@ class About extends Component {
                     <span>Languages</span>
                 </h1>
 
-                <div className="row" style={{marginBottom: "20px", marginRight: "120px"}}>
+                <div className="row languages-box" style={{marginBottom: "20px", marginRight: "120px"}}>
                     {languages}
                 </div>
 
