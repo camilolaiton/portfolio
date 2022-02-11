@@ -154,8 +154,8 @@ class ResearchExperience extends Component {
                                             // disableSlideInfo={false}
                                             // infinite={true}
                                             // autoPlayControls={true}
-                                            disableButtonsControls={false}
-                                            disableDotsControls={true}
+                                            disableButtonsControls={true}
+                                            disableDotsControls={false}
                                             animationType={"slide"}
                                         />
                                         {modals}
