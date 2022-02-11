@@ -29,12 +29,12 @@ class Header extends Component {
 
     render() {
         if (this.props.socialInfo) {
-            var networks = this.props.socialInfo.map(function (network) {
-              console.log(network);
+            var networks = this.props.socialInfo.map(function (network, nKey) {
+            //   console.log(network);
               return (
                   <div className='col-sm'>
                       <div className='row-sm'>
-                        <span key={network.name} className="m-4">
+                        <span key={nKey } className="m-4">
                             <a href={network.url} target="_blank" rel="noopener noreferrer">
                                 <Icon icon={network.class} height={30} color={network.color} />
                             </a>
@@ -77,11 +77,11 @@ class Header extends Component {
                                 </div>
 
                                 <div className='i-title-item'>
-                                    Language Lover
+                                    React Developer
                                 </div>
 
                                 <div className='i-title-item'>
-                                    Enterpreneur
+                                    Language Lover
                                 </div>
                                     
                             </div>
@@ -122,7 +122,7 @@ class Header extends Component {
                         <div className='i-theme row' style={{marginLeft: "70px", marginRight: "70px"}}>
                             {networks}
                         </div>
-                        
+
                         <a href='https://raw.githubusercontent.com/camilolaiton/portfolio/master/public/DL%20Camilo%20Laiton%20-%20Resume.pdf' className="btn btn-outline-light btn-rounded i-cv" target="_blank" rel="noreferrer" data-mdb-ripple-color="dark" role="button" download>
                             Click to download my CV
                         </a>

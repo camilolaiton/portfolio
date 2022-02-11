@@ -36,3 +36,37 @@
     margin-top: 3px;
     margin-bottom: -20px;
 }
+
+.sliderimg{
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #cfd8dc;
+    border-width: 2px;
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.sliderimgzoomed {
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #cfd8dc;
+    border-width: 2px;
+    width: 100%;
+    height: auto;
+}
+
+.zoom {
+    transition: transform .2s;
+    margin: 0 auto;
+}
+
+.zoom:hover {
+    transform: scale(1.8);
+}
+
+.sliderimgDesc {
+    padding-left: 20px;
+    font-weight: 100;
+    font-size: small;
+}

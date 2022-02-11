@@ -7,9 +7,13 @@ import "react-vertical-timeline-component/style.min.css";
 import '../css/Experience.css';
 import { Icon } from '@iconify/react';
 import Badge from "react-bootstrap/Badge";
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
+
+const handleDragStart = (e) => e.preventDefault();
 
 class ResearchExperience extends Component {
-
+    
     render () {
 
         if (this.props.researchInfo) {
@@ -55,8 +59,62 @@ class ResearchExperience extends Component {
                     );
                 });
 
+                var researchImages = item.images.map(function(image, rkey) {
+                    return (
+                        <React.Fragment>
+                            <img 
+                                className="d-block w-100 sliderimg" 
+                                src={process.env.PUBLIC_URL + '/' + image.url} 
+                                alt={image.desc}
+                                title="Click to expand" 
+                                onDragStart={handleDragStart} 
+                                key={rkey}
+                                onClick={function changeCardState() {
+                                    // alert(item.id);
+                                    let modal = document.getElementById("modal_" + rkey + "_" + item.id);
+                                    modal.style.display = "block";
+                                    // console.log(modal);
+                                    // modal.modal();
+                                }}
+                            />
+                        </React.Fragment>
+                    )
+                });
+
+                var modals = item.images.map(function(image, rkey) {
+                    return (
+                        <React.Fragment>
+                            <div id={"modal_" + rkey + "_" + item.id} key={rkey} className="modal" tabIndex="-1" role="dialog" style={{paddingTop: "10px"}}>
+                                <div className="modal-dialog" role="document">
+                                    <div className="modal-content">
+                                    <div className="modal-header">
+                                        <h5 className="modal-title">{item.english.title}</h5>
+                                    </div>
+                                    <div className="modal-body">
+                                    <img 
+                                        className="d-block w-200 sliderimgzoomed zoom" 
+                                        src={process.env.PUBLIC_URL + '/' + image.url} 
+                                        alt={image.desc}
+                                        title="Click to expand"
+                                    />
+                                    </div>
+                                    <p className="sliderimgDesc">{image.desc}</p>
+                                    <div className="modal-footer">
+                                        <button type="button" className="btn btn-secondary" data-dismiss="modal" onClick={function() {
+                                            let modal = document.getElementById("modal_" + rkey + "_" + item.id);
+                                            modal.style.display = "none";
+                                        }}>Close</button>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </React.Fragment>
+                    )
+                });
+
                 return (
-                    <VerticalTimelineElement
+                    <React.Fragment>
+                        <VerticalTimelineElement
                             className="vertical-timeline-element--work"
                             contentStyle={{ background: 'white', color: '#000', borderRadius: "30px"}}
                             contentArrowStyle={{ borderRight: '7px solid white' }}
@@ -67,30 +125,53 @@ class ResearchExperience extends Component {
                             visible={false}
                             key={i}
                         >
-                        <h3 className="vertical-timeline-element-title itemTitle">
-                            {topics}
-                        </h3>
-                        <hr className="itemHr"/>
-                        <h4 className="vertical-timeline-element-subtitle itemSubtitle">
-                            Title 
-                            <div className="inline-block" style={{paddingLeft: "10px", fontStyle: "italic"}}>
-                                {item.english.title}
-                            </div>
-                        </h4>
-                        
-                        <h4 className="vertical-timeline-element-subtitle itemSubtitle">Mentors {tutors}</h4>
+                            <h3 className="vertical-timeline-element-title itemTitle">
+                                {topics}
+                            </h3>
+                            <hr className="itemHr"/>
+                            <h4 className="vertical-timeline-element-subtitle itemSubtitle">
+                                Title 
+                                <div className="inline-block" style={{paddingLeft: "10px", fontStyle: "italic"}}>
+                                    {item.english.title}
+                                </div>
+                            </h4>
+                            
+                            <h4 className="vertical-timeline-element-subtitle itemSubtitle">Mentors {tutors}</h4>
 
-                        <h4 className="vertical-timeline-element-subtitle itemSubtitle">Publications {papers}</h4>
-                        
-                        <p style={{fontStyle: "italic"}}>
-                            {item.organization} - {item.researchGroup}
-                        </p>
-                        <hr className="itemHr"/>
-                        
-                        <div className="technologyTimeElement">
-                            {technologies}
-                        </div>
-                    </VerticalTimelineElement>
+                            <h4 className="vertical-timeline-element-subtitle itemSubtitle">Publications {papers}</h4>
+
+                            {
+                                item.images.length ? <div>
+                                        <h4 className="vertical-timeline-element-subtitle itemSubtitle">Images </h4>
+                                        <AliceCarousel 
+                                            mouseTracking 
+                                            items={researchImages}
+                                            animationDuration={1000}
+                                            autoHeight={true}
+                                            autoWidth={true}
+                                            autoPlay={true}
+                                            autoPlayInterval={5000}
+                                            // disableSlideInfo={false}
+                                            // infinite={true}
+                                            // autoPlayControls={true}
+                                            disableButtonsControls={false}
+                                            disableDotsControls={true}
+                                            animationType={"slide"}
+                                        />
+                                        {modals}
+                                    </div> : null
+                            }
+                            
+                            <p style={{fontStyle: "italic"}}>
+                                {item.organization} - {item.researchGroup}
+                            </p>
+                            <hr className="itemHr"/>
+                            
+                            <div className="technologyTimeElement">
+                                {technologies}
+                            </div>
+                        </VerticalTimelineElement>
+                    </React.Fragment>
                 );
             });
         }

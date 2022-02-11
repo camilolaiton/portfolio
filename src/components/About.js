@@ -65,7 +65,7 @@ class About extends Component {
 
                     He has substantial experience in deep learning, process development, image processing, and computer vision with the goal of developing AI-based 
                     solutions to address real-world challenges.
-                </p>
+                </p>              
                 
                 <hr className="hr"/>
                 
