@@ -31,7 +31,7 @@
     "honors": [
       {
         "honor": "BEDA Scholarship recipient awarded for maintaining a 5.0/5.0 GPA in the Masters program.",
-        "year": 2021
+        "year": "2021-2022"
       },
       {
         "honor": "Suma Cum Laude, University of Magdalena.",
@@ -195,8 +195,8 @@
         "pubs": [
           {
             "title": "A CNN-based model for dynamic traffic signal timing estimation at simple urban intersections",
-            "url":"",
-            "state":"Pending publication"
+            "url":"http://www.arpnjournals.org/jeas/research_papers/rp_2022/jeas_0122_8822.pdf",
+            "state":"Published - ARPN Journals | 2022 Vol. 17 No. 1"
           }
         ],
         "images": [
@@ -264,6 +264,11 @@
             "title": "Self-attention unet-based architecture for gray matter segmentation in brain imaging",
             "url":"#",
             "state":"Pending publication"
+          },
+          {
+            "title": "Skull stripping of MRI images using a deep 3D neural network with self-attention modules",
+            "url":"#",
+            "state":"Pending publication"
           }
         ],
         "images": [
@@ -327,7 +332,26 @@
           }
         ],
         "images": [
-          
+          {
+            "url": "images/ferrofluvial/summary_protocol.png",
+            "desc": "Summary review protocol "
+          },
+          {
+            "url": "images/ferrofluvial/application_domains.png",
+            "desc": "Distribution of the selected papers by application domain"
+          },
+          {
+            "url": "images/ferrofluvial/monitoring_domain.png",
+            "desc": "Distribution of the selected papers by monitoring domain"
+          },
+          {
+            "url": "images/ferrofluvial/communication_security_domain.png",
+            "desc": "Distribution of the selected papers by communication and security domain"
+          },
+          {
+            "url": "images/ferrofluvial/decision_planification_domain.png",
+            "desc": "Distribution of the selected papers by decision and planification techniques domain"
+          }
         ]
       }
     ],
