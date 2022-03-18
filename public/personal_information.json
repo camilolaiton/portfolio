@@ -445,7 +445,7 @@
           "title": "Data Engineer",
           "description": [
               "Implementation of a Geoscientific Data Lake for the Servicio Geológico Colombiano (SGC)",
-              "ETL process development in Azure Databricks",
+              "ETL process development with Azure Datafactory and Azure Databricks",
               "App Development in Power Apps"
           ]
         },
