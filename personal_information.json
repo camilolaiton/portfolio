@@ -312,10 +312,6 @@
           {
             "name": "Prof. Jhon Branch",
             "cvlac": "https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000027090"
-          },
-          {
-            "name": "Prof. Julian Zapata",
-            "cvlac": "https://scholar.google.com/citations?user=j2CV8VYAAAAJ&hl=en"
           }
         ],
         "spanish": {
@@ -327,8 +323,8 @@
         "pubs": [
           {
             "title": "Industry 4.0 technologies applied to the rail transportation industry: A Systematic Review",
-            "url":"#",
-            "state":"Pending publication"
+            "url":"https://www.mdpi.com/1424-8220/22/7/2491",
+            "state":"Published - Sensors Journal | Industrial Sensors Section"
           }
         ],
         "images": [
