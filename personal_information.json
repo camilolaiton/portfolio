@@ -257,8 +257,8 @@
         "pubs": [
           {
             "title": "Deep 3D neural network for brain structures segmentation using self-attention modules in MRI images",
-            "url":"#",
-            "state":"Pending publication"
+            "url":"https://www.mdpi.com/1424-8220/22/7/2559",
+            "state":"Published - Sensors Journal | DOI: 10.3390/s22072559"
           },
           {
             "title": "Self-attention unet-based architecture for gray matter segmentation in brain imaging",
@@ -323,8 +323,8 @@
         "pubs": [
           {
             "title": "Industry 4.0 technologies applied to the rail transportation industry: A Systematic Review",
-            "url":"https://www.mdpi.com/1424-8220/22/7/2491",
-            "state":"Published - Sensors Journal | Industrial Sensors Section"
+            "url":"https://doi.org/10.3390/s22072491",
+            "state":"Published - Sensors Journal | DOI: 10.3390/s22072491"
           }
         ],
         "images": [
