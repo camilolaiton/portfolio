@@ -123,23 +123,33 @@
 
 /* Light Theme */
 [data-theme="light"] {
-  --color-background: var(--color-light-background);
-  --color-background-alt: var(--color-light-background-alt);
-  --color-surface: var(--color-light-surface);
-  --color-surface-alt: var(--color-light-surface-alt);
+  /* Improved Light Theme Backgrounds */
+  --color-background: #f8fafc;
+  --color-background-alt: #e2e8f0;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f1f5f9;
   
-  --color-text-primary: var(--color-light-text-primary);
-  --color-text-secondary: var(--color-light-text-secondary);
-  --color-text-muted: var(--color-light-text-muted);
+  /* Improved Light Theme Text Colors */
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #475569;
+  --color-text-muted: #64748b;
+  --color-text-on-dark: #0f172a;
   
-  --glass-background: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(148, 163, 184, 0.2);
+  /* Light Theme Gradients */
+  --gradient-hero: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  --gradient-dark: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+  --gradient-card: linear-gradient(145deg, rgba(30, 58, 138, 0.03) 0%, rgba(59, 130, 246, 0.02) 100%);
   
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
-  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  /* Light Theme Glass Effect */
+  --glass-background: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(30, 58, 138, 0.15);
+  
+  /* Light Theme Shadows - More Visible */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
 /* Utility Classes */
