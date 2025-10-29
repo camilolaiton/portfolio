@@ -1,70 +1,303 @@
-# Getting Started with Create React App
+# 🚀 Modern Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive portfolio website built with React 18, featuring smooth animations, glassmorphism design, and an easy-to-manage project system.
 
-## Available Scripts
+## ✨ Features
 
-In the project directory, you can run:
+- **Modern Design**: Glassmorphism effects, smooth animations, and contemporary UI
+- **Responsive**: Fully responsive design that works on all devices
+- **Dark/Light Theme**: Toggle between themes with smooth transitions
+- **Smooth Navigation**: Floating navigation with scroll progress indicator
+- **Project Management**: Easy-to-use system for adding and managing projects
+- **Performance Optimized**: Lazy loading, modern React patterns, and optimized assets
+- **Accessibility**: WCAG compliant with proper focus management and screen reader support
 
-### `npm start`
+## 🛠️ Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React 18** - Latest React with concurrent features
+- **Framer Motion** - Smooth animations and interactions
+- **Swiper** - Modern touch slider for image galleries
+- **CSS Variables** - Modern CSS with custom properties
+- **React Intersection Observer** - Efficient scroll-triggered animations
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🏃‍♂️ Quick Start
 
-### `npm test`
+### Prerequisites
+- Node.js 16+ 
+- npm or yarn
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/camilolaiton/portfolio.git
+   cd portfolio
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Start development server**
+   ```bash
+   npm start
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
 
-### `npm run eject`
+5. **Deploy to GitHub Pages**
+   ```bash
+   npm run deploy
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📁 Project Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+src/
+├── components/          # React components
+│   ├── Header.js       # Hero section with profile
+│   ├── About.js        # About section
+│   ├── Projects.js     # Featured projects showcase
+│   ├── Navigation.js   # Floating navigation
+│   ├── Skills.js       # Technical skills grid
+│   └── ...
+├── css/                # Component-specific styles
+│   ├── variables.css   # CSS custom properties
+│   ├── Header.css      # Header styling
+│   ├── Projects.css    # Projects styling
+│   └── ...
+└── imgs/               # Static images
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+public/
+├── personal_information.json  # Personal data
+├── projects.json              # Project data
+└── images/                    # Project images
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🎨 Adding New Projects
 
-## Learn More
+### Method 1: Using the Project Configuration (Recommended)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Edit `/public/projects.json` to add new projects:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```json
+{
+  "featured_projects": [
+    {
+      "id": "unique-project-id",
+      "title": "Project Title",
+      "category": "deep-learning", // or web-development, research, etc.
+      "featured": true,
+      "status": "completed", // or in-progress
+      "start_date": "2023-01",
+      "end_date": "2023-12",
+      "short_description": "Brief project description for cards",
+      "technologies": ["react", "python", "tensorflow"],
+      "github_url": "https://github.com/username/repo",
+      "demo_url": "https://demo-link.com",
+      "paper_url": "https://paper-link.com",
+      "images": [
+        {
+          "url": "images/project-folder/image1.jpg",
+          "title": "Image Title",
+          "description": "Image description",
+          "is_featured": true // This image will be shown on project cards
+        }
+      ],
+      "highlights": [
+        "Key achievement 1",
+        "Key achievement 2",
+        "Key achievement 3"
+      ]
+    }
+  ]
+}
+```
 
-### Code Splitting
+### Method 2: Step-by-Step Guide
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. **Add project images**
+   - Create a folder in `/public/images/` (e.g., `/public/images/my-new-project/`)
+   - Add your project images (JPG, PNG, GIF supported)
 
-### Analyzing the Bundle Size
+2. **Update projects.json**
+   - Open `/public/projects.json`
+   - Add your project to the `featured_projects` array
+   - Use the template above as reference
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. **Add new technologies (if needed)**
+   - Add new entries to the `technology_stack` object in `projects.json`
+   - Use [Iconify](https://iconify.design) for technology icons
 
-### Making a Progressive Web App
+4. **Add new categories (if needed)**
+   - Add new entries to the `project_categories` object
+   - Choose appropriate icons and colors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Project Categories
 
-### Advanced Configuration
+Available categories:
+- `deep-learning` - AI/ML projects
+- `computer-vision` - Computer vision projects  
+- `web-development` - Web applications
+- `research` - Research papers/studies
+- `data-science` - Data analysis projects
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Technology Stack
 
-### Deployment
+Pre-configured technologies include:
+- **Languages**: Python, JavaScript, TypeScript
+- **Frameworks**: React, TensorFlow, PyTorch
+- **Tools**: Docker, Git, AWS
+- **Research**: Systematic reviews, medical imaging
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🎨 Customizing Design
 
-### `npm run build` fails to minify
+### Colors and Themes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Edit `/src/css/variables.css` to customize:
+
+```css
+:root {
+  /* Primary colors */
+  --color-primary: #2563eb;
+  --color-accent: #f59e0b;
+  
+  /* Gradients */
+  --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  
+  /* Spacing */
+  --spacing-xl: 2rem;
+  
+  /* Typography */
+  --font-family-heading: 'Inter', sans-serif;
+}
+```
+
+### Adding Custom Animations
+
+Use Framer Motion for animations:
+
+```jsx
+import { motion } from 'framer-motion';
+
+const variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 }
+};
+
+<motion.div
+  variants={variants}
+  initial="hidden"
+  animate="visible"
+  transition={{ duration: 0.6 }}
+>
+  Your content
+</motion.div>
+```
+
+## 📱 Responsive Design
+
+The portfolio is fully responsive with breakpoints:
+- **Desktop**: 1200px+
+- **Tablet**: 768px - 1199px  
+- **Mobile**: < 768px
+
+## 🔧 Configuration
+
+### Personal Information
+
+Edit `/public/personal_information.json`:
+
+```json
+{
+  "name": "Your Name",
+  "titles": ["Title 1", "Title 2"],
+  "social": [
+    {
+      "name": "github",
+      "url": "https://github.com/username",
+      "class": "akar-icons:github-fill",
+      "color": "white"
+    }
+  ],
+  "skills": [...],
+  "experience": [...],
+  "research": [...]
+}
+```
+
+### Site Metadata
+
+Update `/public/index.html`:
+- Title, description, meta tags
+- Favicon and app icons
+- Google Fonts imports
+
+## 🚀 Deployment
+
+### GitHub Pages (Recommended)
+
+1. **Set homepage in package.json**
+   ```json
+   "homepage": "https://yourusername.github.io/repository-name"
+   ```
+
+2. **Deploy**
+   ```bash
+   npm run deploy
+   ```
+
+### Other Platforms
+
+- **Vercel**: Connect GitHub repo
+- **Netlify**: Drag & drop build folder
+- **Custom Server**: Upload build folder contents
+
+## 🔍 SEO Optimization
+
+- Update meta tags in `/public/index.html`
+- Add structured data for projects
+- Optimize images (use WebP when possible)
+- Add alt text for all images
+
+## 📊 Analytics
+
+Add Google Analytics or other tracking:
+
+1. Add tracking script to `/public/index.html`
+2. Update privacy policy if needed
+3. Consider GDPR compliance for EU visitors
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🙏 Acknowledgments
+
+- [Framer Motion](https://www.framer.com/motion/) for animations
+- [Iconify](https://iconify.design) for icons
+- [Swiper](https://swiperjs.com/) for image galleries
+- [React Intersection Observer](https://github.com/thebuilder/react-intersection-observer) for scroll animations
+
+## 📞 Support
+
+If you have questions or need help:
+- Open an issue on GitHub
+- Check the documentation
+- Review example projects in the repo
+
+---
+
+**Built with ❤️ by [Camilo Laiton](https://github.com/camilolaiton)**

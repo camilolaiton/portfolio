@@ -1,137 +1,193 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import '../css/Header.css';
-import PersonalImg from '../imgs/CamiloLaiton.png'
+import CamiloLaiton_360x257 from '../imgs/CamiloLaiton_360x257.jpg';
+import CamiloLaiton_540x386 from '../imgs/CamiloLaiton_540x386.jpg';
+import CamiloLaiton_1024x732 from '../imgs/CamiloLaiton_1024x732.jpg';
 import { Icon } from '@iconify/react';
-import Typical from "react-typical";
-// import Switch from "react-switch";
+import { TypeAnimation } from 'react-type-animation';
 
-class Header extends Component {
+const Header = ({ name, socialInfo }) => {
+    const [theme, setTheme] = useState('dark');
 
-    constructor() {
-        super();
-        this.state = { checked: false };
-        this.onThemeSwitchChange = this.onThemeSwitchChange.bind(this);
-    }
+    const toggleTheme = () => {
+        const newTheme = theme === 'light' ? 'dark' : 'light';
+        setTheme(newTheme);
+        document.body.setAttribute('data-theme', newTheme);
+    };
 
-    onThemeSwitchChange(checked) {
-        this.setState({ checked });
-        this.setTheme();
-        console.log(document.body.getAttribute("data-theme"))
-    }
+    useEffect(() => {
+        // Set initial theme to dark
+        document.body.setAttribute('data-theme', 'dark');
+    }, []);
 
-    setTheme() {
-        var dataThemeAttribute = "data-theme";
-        var body = document.body;
-        var newTheme =
-            body.getAttribute(dataThemeAttribute) === "dark" ? "light" : "dark";
-        body.setAttribute(dataThemeAttribute, newTheme);
-    }
-
-    render() {
-        if (this.props.socialInfo) {
-            var networks = this.props.socialInfo.map(function (network, nKey) {
-            //   console.log(network);
-              return (
-                  <div className='col-sm row-theme'>
-                      <div className='row-sm'>
-                        <span key={nKey } className="m-4">
-                            <a href={network.url} target="_blank" rel="noopener noreferrer">
-                                <Icon icon={network.class} height={30} color={network.color} />
-                            </a>
-                        </span>
-                    </div>
-                    <div className='row-sm social-title'>
-                        {network.name}
-                    </div>
-                  </div>
-              );
-            });
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                duration: 0.6,
+                staggerChildren: 0.1
+            }
         }
+    };
 
-        return (
-            <div className="header">
-                <div className='row mx-auto' style={{height: '100%'}}>
-                    <div className="my-auto">
-                        
-                        <img src={PersonalImg} alt="" className="i-img" />
+    const itemVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.5, ease: "easeOut" }
+        }
+    };
 
-                        <h1 className="mb-0 title-container">
-                            <Typical steps={["Camilo Laiton 💻"]} wrapper="p" loop={50} />
-                            {/* <Icon icon="emojione:desktop-computer" className='' height={50}/> */}
-                        </h1>
+    const imageVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: { duration: 0.6, ease: "easeOut" }
+        }
+    };
 
-                        <div className='i-title'>
-                        
-                            <div className='i-title-wrapper'>
-                                
-                                <div className='i-title-item'>
-                                    Computer Vision Engineer
-                                </div>
+    const socialNetworks = socialInfo?.map((network, nKey) => (
+        <motion.div 
+            key={nKey}
+            className="social-item"
+            variants={itemVariants}
+        >
+            <a 
+                href={network.url} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label={`Visit ${network.name} profile`}
+            >
+                <Icon 
+                    icon={network.class} 
+                    height={24} 
+                    color={network.color}
+                    className="social-icon"
+                />
+            </a>
+            <span className="social-title">
+                {network.name}
+            </span>
+        </motion.div>
+    ));
 
-                                <div className='i-title-item'>
-                                    Machine Learning Developer
-                                </div>
+    return (
+        <section className="header" id="header">
+            <motion.div 
+                className="header-content"
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+            >
+                <motion.div variants={imageVariants}>
+                    <img 
+                        src={CamiloLaiton_1024x732}
+                        srcSet={`
+                            ${CamiloLaiton_360x257} 360w,
+                            ${CamiloLaiton_540x386} 540w,
+                            ${CamiloLaiton_1024x732} 1024w
+                        `}
+                        sizes="180px"
+                        alt="Camilo Laiton" 
+                        className="i-img"
+                        loading="eager"
+                    />
+                </motion.div>
 
-                                <div className='i-title-item'>
-                                    Deep Learning Researcher
-                                </div>
+                <motion.h1 
+                    className="title-container"
+                    variants={itemVariants}
+                >
+                    <TypeAnimation
+                        sequence={[
+                            name || "Camilo Laiton",
+                            2000,
+                            // "Computer Vision Engineer",
+                            // 2000,
+                            // "Large-scale Image Processing",
+                            // 2000,
+                            // "Deep Learning Researcher",
+                            // 2000,
+                        ]}
+                        wrapper="span"
+                        speed={50}
+                        style={{ display: 'inline-block' }}
+                        repeat={Infinity}
+                    />
+                </motion.h1>
 
-                                <div className='i-title-item'>
-                                    React Developer
-                                </div>
-
-                                <div className='i-title-item'>
-                                    Language Lover
-                                </div>
-                                    
-                            </div>
+                <motion.div 
+                    className="i-title"
+                    variants={itemVariants}
+                >
+                    <div className="i-title-wrapper">
+                        <div className="i-title-item">
+                           🤖 Computer Vision Engineer
                         </div>
-
-                        {/* <div className='i-theme'>
-                            <Switch
-                                checked={this.state.checked}
-                                onChange={this.onThemeSwitchChange}
-                                offColor="#cfd8dc"
-                                onColor="#353535"
-                                className="react-switch mx-auto"
-                                width={90}
-                                height={40}
-                                uncheckedIcon={
-                                    <Icon icon="bi:cloud-moon-fill" style={{
-                                        display: "block",
-                                        height: "100%",
-                                        fontSize: 25,
-                                        textAlign: "end",
-                                        marginLeft: "20px",
-                                        color: "#353239",
-                                    }}/>
-                                }
-                                checkedIcon={
-                                    <Icon icon="emojione:sun" style={{
-                                        display: "block",
-                                        height: "100%",
-                                        fontSize: 25,
-                                        textAlign: "end",
-                                        marginLeft: "10px",
-                                        color: "#353239",
-                                    }}/>
-                                }
-                                id="icon-switch"
-                            />
-                        </div> */}
-                        <div className='i-theme row' style={{marginLeft: "70px", marginRight: "70px"}}>
-                            {networks}
+                        <div className="i-title-item">
+                           📊 Large-scale Image Processing
                         </div>
-
-                        <a href='https://raw.githubusercontent.com/camilolaiton/portfolio/master/public/DL%20Camilo%20Laiton%20-%20Resume.pdf' className="btn btn-outline-light btn-rounded i-cv" target="_blank" rel="noreferrer" data-mdb-ripple-color="dark" role="button" download>
-                            Click to download my CV
-                        </a>
+                        <div className="i-title-item">
+                           🧠 Deep Learning Researcher
+                        </div>
+                        <div className="i-title-item">
+                           ☁️ Cloud Computing
+                        </div>
                     </div>
-                </div>
+                </motion.div>
 
-            </div>
-        )
-    }
-}
+                {/* Theme Toggle */}
+                <motion.div 
+                    className="i-theme"
+                    variants={itemVariants}
+                >
+                    <button
+                        onClick={toggleTheme}
+                        className="theme-toggle"
+                        aria-label="Toggle theme"
+                        style={{
+                            background: 'var(--glass-background)',
+                            backdropFilter: 'var(--glass-blur)',
+                            border: '1px solid var(--glass-border)',
+                            borderRadius: 'var(--border-radius-full)',
+                            padding: 'var(--spacing-sm) var(--spacing-md)',
+                            color: 'var(--color-text-on-dark)',
+                            cursor: 'pointer',
+                            transition: 'all var(--transition-normal)',
+                            marginBottom: 'var(--spacing-xl)'
+                        }}
+                    >
+                        <Icon 
+                            icon={theme === 'light' ? "bi:moon-stars" : "bi:sun"} 
+                            height={20}
+                        />
+                    </button>
+                </motion.div>
+
+                <motion.div 
+                    className="social-container"
+                    variants={itemVariants}
+                >
+                    {socialNetworks}
+                </motion.div>
+
+                <motion.a 
+                    href="https://raw.githubusercontent.com/camilolaiton/portfolio/master/public/DL%20Camilo%20Laiton%20-%20Resume.pdf"
+                    className="i-cv"
+                    target="_blank" 
+                    rel="noreferrer"
+                    download
+                    variants={itemVariants}
+                >
+                    <Icon icon="bi:download" height={16} />
+                    Download CV
+                </motion.a>
+            </motion.div>
+        </section>
+    );
+};
 
 export default Header;

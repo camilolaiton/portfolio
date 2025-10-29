@@ -61,20 +61,17 @@ class ResearchExperience extends Component {
 
                 var researchImages = item.images.map(function(image, rkey) {
                     return (
-                        <React.Fragment>
+                        <React.Fragment key={rkey}>  {/* Move key here! */}
                             <img 
                                 className="d-block w-100 sliderimg" 
                                 src={process.env.PUBLIC_URL + '/' + image.url} 
                                 alt={image.desc}
                                 title="Click to expand" 
-                                onDragStart={handleDragStart} 
-                                key={rkey}
+                                onDragStart={handleDragStart}
+                                // Remove key from here
                                 onClick={function changeCardState() {
-                                    // alert(item.id);
                                     let modal = document.getElementById("modal_" + rkey + "_" + item.id);
                                     modal.style.display = "block";
-                                    // console.log(modal);
-                                    // modal.modal();
                                 }}
                             />
                         </React.Fragment>
@@ -83,8 +80,9 @@ class ResearchExperience extends Component {
 
                 var modals = item.images.map(function(image, rkey) {
                     return (
-                        <React.Fragment>
-                            <div id={"modal_" + rkey + "_" + item.id} key={rkey} className="modal" tabIndex="-1" role="dialog" style={{paddingTop: "10px"}}>
+                        <React.Fragment key={rkey}>  {/* Move key here! */}
+                            <div id={"modal_" + rkey + "_" + item.id} className="modal" tabIndex="-1" role="dialog" style={{paddingTop: "10px"}}>
+                                {/* Remove key from the div */}
                                 <div className="modal-dialog" role="document">
                                     <div className="modal-content">
                                     <div className="modal-header">
@@ -113,17 +111,16 @@ class ResearchExperience extends Component {
                 });
 
                 return (
-                    <React.Fragment>
+                    <React.Fragment key={i}>
                         <VerticalTimelineElement
                             className="vertical-timeline-element--work"
-                            contentStyle={{ background: 'white', color: '#000', borderRadius: "30px"}}
-                            contentArrowStyle={{ borderRight: '7px solid white' }}
+                            contentStyle={{ background: 'var(--color-surface)', color: 'var(--color-text-primary)', borderRadius: "30px", border: '1px solid var(--color-surface-alt)'}}
+                            contentArrowStyle={{ borderRight: '7px solid var(--color-surface)' }}
                             date={item.startDate + " - " + item.endDate}
                             dateClassName="dateTimeElement"
-                            iconStyle={{ background: "#dadada", color: '#fff' }}
+                            iconStyle={{ background: "var(--color-secondary)", color: '#fff', boxShadow: '0 0 0 4px var(--color-background), inset 0 2px 0 rgba(0,0,0,.08), 0 3px 0 4px rgba(0,0,0,.05)' }}
                             icon={<Icon icon={item.technologies[0].class}/> }
                             visible={false}
-                            key={i}
                         >
                             <h3 className="vertical-timeline-element-title itemTitle">
                                 {topics}
@@ -178,7 +175,7 @@ class ResearchExperience extends Component {
 
         return (
 
-            <div className="about col-md-12">
+            <div className="about col-md-12" id="research-experience">
                 <hr className="hr"/>
                 <h1>
                     <span>Research experience</span>

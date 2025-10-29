@@ -6,7 +6,7 @@ class Footer extends Component {
   render() {
     if (this.props.socialInfo) {
       var networks = this.props.socialInfo.map(function (network) {
-        console.log(network);
+        // console.log(network);
         return (
             <span key={network.name} className="m-4">
                 <a href={network.url} target="_blank" rel="noopener noreferrer">

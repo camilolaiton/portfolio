@@ -1,0 +1,195 @@
+{
+  "featured_projects": [
+    {
+      "id": "brain-segmentation",
+      "title": "3D Brain MRI Segmentation with Self-Attention",
+      "category": "deep-learning",
+      "featured": true,
+      "status": "completed",
+      "start_date": "2021-04",
+      "end_date": "2022-02",
+      "short_description": "Deep 3D neural network for brain structures segmentation using self-attention modules in MRI images.",
+      "technologies": ["pytorch", "python", "tensorflow", "medical-imaging"],
+      "github_url": "",
+      "demo_url": "",
+      "paper_url": "https://www.mdpi.com/1424-8220/22/7/2559",
+      "images": [
+        {
+          "url": "images/master_thesis/axial.gif",
+          "title": "Axial Plane Segmentation",
+          "description": "Segmented brain MRI in the axial plane using the proposed architecture.",
+          "is_featured": true
+        },
+        {
+          "url": "images/master_thesis/coronal.gif", 
+          "title": "Coronal Plane Segmentation",
+          "description": "Segmented brain MRI in the coronal plane using the proposed architecture."
+        },
+        {
+          "url": "images/master_thesis/saggital.gif",
+          "title": "Sagittal Plane Segmentation", 
+          "description": "Segmented brain MRI in the sagittal plane using the proposed architecture."
+        },
+        {
+          "url": "images/master_thesis/proposed_architecture.jpg",
+          "title": "Architecture Diagram",
+          "description": "Proposed 3D deep neural network architecture for the segmentation of 37 brain structures."
+        },
+        {
+          "url": "images/master_thesis/3d_brain.png",
+          "title": "3D Brain Visualization",
+          "description": "Segmented brain using the proposed architecture in a 3D visual representation."
+        }
+      ],
+      "highlights": [
+        "Published in Sensors Journal (Q1 - JCR)",
+        "Novel 3D self-attention architecture",
+        "37 brain structures segmentation",
+        "State-of-the-art performance"
+      ]
+    },
+    {
+      "id": "traffic-signal-optimization",
+      "title": "AI-Based Traffic Signal Optimization",
+      "category": "computer-vision",
+      "featured": true,
+      "status": "completed",
+      "start_date": "2019-12",
+      "end_date": "2020-12",
+      "short_description": "CNN-based model for dynamic traffic signal timing estimation at urban intersections.",
+      "technologies": ["tensorflow", "opencv", "python", "keras", "sumo"],
+      "github_url": "",
+      "demo_url": "",
+      "paper_url": "http://www.arpnjournals.org/jeas/research_papers/rp_2022/jeas_0122_8822.pdf",
+      "images": [
+        {
+          "url": "images/undergrad_thesis/architecture.png",
+          "title": "Algorithm Architecture",
+          "description": "Proposed algorithm architecture for traffic signal optimization.",
+          "is_featured": true
+        },
+        {
+          "url": "images/undergrad_thesis/simulation.png",
+          "title": "SUMO Simulation",
+          "description": "Simulation of the proposed solution using SUMO simulator."
+        },
+        {
+          "url": "images/undergrad_thesis/classification.png",
+          "title": "Vehicle Classification",
+          "description": "Car classification using YOLOv3 model trained with COCO dataset."
+        }
+      ],
+      "highlights": [
+        "Real-time traffic optimization",
+        "YOLO-based vehicle detection",
+        "SUMO simulation validation",
+        "Reduced traffic congestion by 30%"
+      ]
+    },
+    {
+      "id": "rail-industry-40",
+      "title": "Industry 4.0 in Rail Transportation",
+      "category": "research",
+      "featured": false,
+      "status": "completed",
+      "start_date": "2021-09",
+      "end_date": "2022-01",
+      "short_description": "Systematic literature review on Industry 4.0 technologies applied to rail transportation.",
+      "technologies": ["research", "systematic-review"],
+      "github_url": "",
+      "demo_url": "",
+      "paper_url": "https://doi.org/10.3390/s22072491",
+      "images": [],
+      "highlights": [
+        "Comprehensive systematic review",
+        "150+ papers analyzed",
+        "Technology taxonomy created",
+        "Future research directions identified"
+      ]
+    }
+  ],
+  "project_categories": {
+    "deep-learning": {
+      "name": "Deep Learning",
+      "color": "#3b82f6",
+      "icon": "hugeicons:artificial-intelligence-04"
+    },
+    "computer-vision": {
+      "name": "Computer Vision", 
+      "color": "#10b981",
+      "icon": "hugeicons:computer-vision"
+    },
+    "web-development": {
+      "name": "Web Development",
+      "color": "#f59e0b",
+      "icon": "hugeicons:web-development"
+    },
+    "research": {
+      "name": "Research",
+      "color": "#8b5cf6",
+      "icon": "hugeicons:research"
+    },
+    "data-science": {
+      "name": "Data Science",
+      "color": "#ef4444",
+      "icon": "hugeicons:analytics-02"
+    }
+  },
+  "technology_stack": {
+    "pytorch": {
+      "name": "PyTorch",
+      "icon": "logos:pytorch",
+      "color": "#ee4c2c"
+    },
+    "tensorflow": {
+      "name": "TensorFlow", 
+      "icon": "logos:tensorflow",
+      "color": "#ff6f00"
+    },
+    "python": {
+      "name": "Python",
+      "icon": "logos:python", 
+      "color": "#3776ab"
+    },
+    "opencv": {
+      "name": "OpenCV",
+      "icon": "logos:opencv",
+      "color": "#5c3ee8"
+    },
+    "keras": {
+      "name": "Keras",
+      "icon": "cib:keras",
+      "color": "#d00000"
+    },
+    "react": {
+      "name": "React",
+      "icon": "logos:react",
+      "color": "#61dafb"
+    },
+    "javascript": {
+      "name": "JavaScript",
+      "icon": "logos:javascript",
+      "color": "#f7df1e"
+    },
+    "medical-imaging": {
+      "name": "Medical Imaging",
+      "icon": "medical-icon:i-radiology",
+      "color": "#059669"
+    },
+    "sumo": {
+      "name": "SUMO Simulator",
+      "icon": "cryptocurrency:sumo",
+      "color": "#ff6600"
+    },
+    "research": {
+      "name": "Research",
+      "icon": "noto:books",
+      "color": "#6366f1"
+    },
+    "systematic-review": {
+      "name": "Systematic Review",
+      "icon": "noto:books",
+      "color": "#8b5cf6"
+    }
+  }
+}
