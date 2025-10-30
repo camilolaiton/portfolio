@@ -157,14 +157,14 @@
       "start_date": "2024",
       "end_date": "2024",
       "short_description": "A package for running RNA detection in large microscopy datasets using cloud computing resources.",
-      "technologies": ["pytorch", "python"],
+      "technologies": ["numpy", "cuda", "scipy", "python"],
       "github_url": "https://github.com/AllenNeuralDynamics/aind-z1-spot-detection",
       "demo_url": "",
       "paper_url": "",
       "images": [
         {
           "url": "images/rna_detection/RNA_detection.png",
-          "title": "Fast RNA Detection Inference",
+          "title": "Fast RNA Detection in Terabyte-scale Images",
           "description": "Large-scale RNA detection.",
           "is_featured": true
         }
@@ -395,9 +395,24 @@
       "color": "#8b5cf6"
     },
     "brain":{
-        "name": "Neuroscience",
-        "icon": "twemoji:brain",
-        "color": ""
+      "name": "Neuroscience",
+      "icon": "twemoji:brain",
+      "color": ""
+    },
+    "scipy": {
+      "name": "Scipy",
+      "icon": "simple-icons:scipy",
+      "color": "lightblue"
+    },
+    "numpy": {
+      "name": "NumPy",
+      "icon": "devicon:numpy",
+      "color": ""
+    },
+    "cuda": {
+      "name": "Cupy",
+      "icon": "catppuccin:cuda",
+      "color": ""
     }
   }
 }

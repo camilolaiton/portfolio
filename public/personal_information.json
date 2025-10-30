@@ -437,6 +437,11 @@
           "color": ""
         },
         {
+          "name": "Cupy",
+          "class": "catppuccin:cuda",
+          "color": ""
+        },
+        {
           "name": "NextFlow",
           "class": "vscode-icons:file-type-nextflow",
           "color": ""
