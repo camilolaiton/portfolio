@@ -1,134 +1,103 @@
+import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
-import $ from "jquery";
 import Header from './components/Header';
 import About from './components/About';
+import Projects from './components/Projects';
 import WorkExperience from './components/WorkExperience';
-import ResearchExperience from './components/ResearchExperience';
+// import ResearchExperience from './components/ResearchExperience';
+import Publications from './components/Publications';
 import Skills from './components/Skills';
-import { Component } from 'react';
 import Footer from './components/Footer';
+import Navigation from './components/Navigation';
 
-class App extends Component {
+const App = () => {
+  const [sharedData, setSharedData] = useState({});
+  const [loading, setLoading] = useState(true);
 
-  constructor(props) {
-    super();
-    this.state = {
-      foo: "bar",
-      language: "english",
-      resumeData: {},
-      sharedData: {},
-    };
-  }
-
-  applyPickedLanguage(pickedLanguage) {
-    this.swapCurrentlyActiveLanguage(pickedLanguage);
-    // console.log(pickedLanguage)
-  }
-
-  swapCurrentlyActiveLanguage(pickedLanguage) {
-
-    if ("english" === pickedLanguage && this.state.language !== "english") {
-      this.setState({ language: "english" });
-      
-      document
-        .getElementById(pickedLanguage)
-        .setAttribute("filter", "brightness(40%)");
-        
-      document
-        .getElementById("spanish")
-        .removeAttribute("filter", "brightness(40%)");
-    } else if ("spanish" === pickedLanguage && this.state.language !== "spanish") {
-      this.setState({ language: "spanish" });
-      document
-        .getElementById(pickedLanguage)
-        .setAttribute("filter", "brightness(40%)");
-        
-      document
-        .getElementById("english")
-        .removeAttribute("filter", "brightness(40%)");
-    }
-  }
-
-  loadProfileData() {
-    $.ajax({
-      url: `personal_information.json`,
-      dataType: "json",
-      cache: false,
-      success: function(data) {
-        this.setState({ sharedData: data });
-        console.log(this.state.sharedData)
-        document.title = `${this.state.sharedData.name}`;
-      }.bind(this),
-      error: function(xhr, status, err) {
-        alert(err);
+  const loadProfileData = async () => {
+    try {
+      const response = await fetch(`${process.env.PUBLIC_URL}/personal_information.json`);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
-    });
-  }
+      const data = await response.json();
+      setSharedData(data);
+      document.title = data.name || 'Camilo Laiton Portfolio';
+      setLoading(false);
+    } catch (error) {
+      console.error('Error loading profile data:', error);
+      setLoading(false);
+    }
+  };
 
-  componentDidMount() {
-    this.loadProfileData();
-    this.applyPickedLanguage(
-      "english"
-    )
-  }
+  useEffect(() => {
+    loadProfileData();
+  }, []);
 
-  render () {
+  if (loading) {
     return (
-      <div className="App">
-        <Header 
-          name={this.state.sharedData.name}
-          socialInfo={this.state.sharedData.social}  
-        />
-        
-        {/* <div className="col-md-12 mx-auto text-center language">
-          <h1>
-            Select a language
-          </h1>
-          <div
-            onClick={() =>
-              this.applyPickedLanguage(
-                "english"
-              )
-            }
-            style={{ display: "inline" }}
-          >
-            <Icon className='language-icon' icon="twemoji-flag-for-flag-united-states" id="english" height={50}/>
-          </div>
-          <div
-            onClick={() =>
-              this.applyPickedLanguage(
-                "spanish"
-              )
-            }
-            style={{ display: "inline" }}
-          >
-            <Icon className='language-icon mx-2' icon="twemoji-flag-for-flag-spain" id="spanish" height={50}/>
-          </div>
-        </div> */}
-
-        <About 
-          languages={this.state.sharedData.speakLanguages}
-          honors={this.state.sharedData.honors}
-          certificates={this.state.sharedData.certificates}
-        />
-        <WorkExperience 
-          workInfo={this.state.sharedData.projects}
-        />
-        <Skills 
-          sharedSkills={this.state.sharedData.skills}
-          resumeBasicInfo={this.state.sharedData.name}
-        />
-        <ResearchExperience 
-          researchInfo={this.state.sharedData.research}
-        />
-        <Footer 
-          socialInfo={this.state.sharedData.social}
-          name={this.state.sharedData.name}  
-        />
+      <div className="loading-container" style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        minHeight: '100vh',
+        background: 'var(--gradient-hero)',
+        color: 'var(--color-text-on-dark)',
+        fontSize: 'var(--font-size-lg)',
+        fontWeight: 'var(--font-weight-medium)'
+      }}>
+        Loading portfolio...
       </div>
     );
   }
-}
+
+  return (
+    <div className="App">
+      <Navigation />
+      
+      <Header 
+        name={sharedData.name}
+        socialInfo={sharedData.social}  
+      />
+      
+      <About 
+        languages={sharedData.speakLanguages}
+      />
+      
+      <Projects />
+      
+      <WorkExperience 
+        workInfo={sharedData.projects}
+      />
+
+      <Publications 
+        researchInfo={sharedData.research}
+      />
+      
+      <Skills 
+        sharedSkills={sharedData.skills}
+        resumeBasicInfo={sharedData.name}
+      />
+{/*       
+      <ResearchExperience 
+        researchInfo={sharedData.research}
+      /> */}
+      
+      <About 
+        honors={sharedData.honors}
+        certificates={sharedData.certificates}
+        showAbout={false}
+        showHonors={true}
+        showCertificates={false}
+      />
+      
+      <Footer 
+        socialInfo={sharedData.social}
+        name={sharedData.name}  
+      />
+    </div>
+  );
+};
 
 export default App;

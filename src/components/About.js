@@ -1,105 +1,220 @@
-import React, { Component } from "react";
+import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import '../css/About.css';
 import { Icon } from '@iconify/react';
 
-class About extends Component {
+const About = ({ 
+    languages, 
+    honors, 
+    certificates, 
+    showAbout = true,
+    showHonors = false,
+    showCertificates = false
+}) => {
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.1
+    });
 
-    render () {
-
-        if (this.props.languages) {
-            var languages = this.props.languages.map(function(language, i) {
-                return (
-                    <div className="col-sm" key={i}>
-                        <div className="row-sm language-title">
-                            {language.name} <Icon className='language-icon' icon={language.class} height={20}/>
-                        </div>
-                        <div className="row-sm language-subtitle">
-                            {language.level}
-                        </div>
-                    </div>
-                );
-            });
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                duration: 0.5,
+                staggerChildren: 0.08
+            }
         }
+    };
 
-        if (this.props.honors) {
-            var honors = this.props.honors.map(function(honor, i) {
-                return (
-                    <div className="row-sm" key={i}>
-                        <li>
-                            <span style={{fontWeight: "bold"}}>[{honor.year}]</span> {honor.honor}
-                        </li>
-                    </div>
-                );
-            });
+    const itemVariants = {
+        hidden: { opacity: 0, y: 15 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.4, ease: "easeOut" }
         }
+    };
 
-        if (this.props.certificates) {
-            var certificates = this.props.certificates.map(function(certificate, i) {
-                return (
-                    <div className="row-sm" key={i}>
-                        <Icon 
-                            className='certificate-icon' 
-                            icon={certificate.class} 
-                            color={certificate.color} 
-                            height={30}
-                        /> &nbsp;
-                        <a href={certificate.url} target="_blank" rel="noreferrer" className="i-certificate">
-                            {certificate.title}
-                        </a>
-                    </div>
-                );
-            });
-        }
-
-        return (
-
-            <div className="about col-md-12">
-                <h1>
-                    <span>About me</span>
-                </h1>
-                
-                <p className="about-info container">
-                    Camilo Laiton is a MsC candidate in Systems Engineering at the <a href="https://medellin.unal.edu.co/" target="_blank" rel="noreferrer" className="a-item">National University of Colombia - Medellín </a> 
-                    under the supervision of <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000479918" target="_blank" rel="noreferrer" className="a-item">Prof. German Sanchez</a> and <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000027090" target="_blank" rel="noreferrer" className="a-item">Prof. Jhon Branch</a>.
-                    He received the B.S. degree from the University of Magdalena in 2020 from where he graduated with highest honors.
-
-                    He has substantial experience in deep learning, process development, image processing, and computer vision with the goal of developing AI-based 
-                    solutions to address real-world challenges.
-                </p>              
-                
-                <hr className="hr"/>
-                
-                <h1>
-                    <span>Languages</span>
-                </h1>
-
-                <div className="row languages-box" style={{marginBottom: "20px", marginRight: "120px"}}>
-                    {languages}
-                </div>
-
-                <hr className="hr"/>
-                
-                <h1>
-                    <span>Selected honors</span>
-                </h1>
-
-                <div className="row-sm honors container" style={{marginBottom: "20px", marginRight: "120px"}}>
-                    {honors}
-                </div>
-
-                <hr className="hr"/>
-                
-                <h1>
-                    <span>Certificates</span>
-                </h1>
-
-                <div className="row-sm certificates container" style={{marginBottom: "20px", marginRight: "120px"}}>
-                    {certificates}
-                </div>
-                
+    const languageItems = languages?.map((language, i) => (
+        <motion.div 
+            key={i}
+            className="language-item"
+            variants={itemVariants}
+        >
+            <Icon 
+                className='language-icon' 
+                icon={language.class} 
+                height={48}
+            />
+            <div className="language-title">
+                {language.name}
             </div>
-        )
-    }
-}
+            <div className="language-subtitle">
+                {language.level}
+            </div>
+        </motion.div>
+    ));
+
+    const honorItems = honors?.map((honor, i) => (
+        <motion.li 
+            key={i}
+            variants={itemVariants}
+        >
+            <strong>[{honor.year}]</strong> {honor.honor}
+        </motion.li>
+    ));
+
+    const certificateItems = certificates?.map((certificate, i) => (
+        <motion.li 
+            key={i}
+            variants={itemVariants}
+        >
+            <Icon 
+                className='certificate-icon' 
+                icon={certificate.class} 
+                color={certificate.color} 
+                height={24}
+            />
+            <a 
+                href={certificate.url} 
+                target="_blank" 
+                rel="noreferrer" 
+                className="i-certificate"
+            >
+                {certificate.title}
+            </a>
+        </motion.li>
+    ));
+
+    return (
+        <motion.section 
+            className="about"
+            id={showAbout ? "about" : "honors-certificates"}
+            ref={ref}
+            variants={containerVariants}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+        >
+            <div className="container">
+                {showAbout && (
+                    <>
+                        <motion.h1 variants={itemVariants}>
+                            About me
+                        </motion.h1>
+                        
+                        <motion.div 
+                            className="about-content"
+                            variants={itemVariants}
+                        >
+                            <div className="about-info">
+                                <p>
+                                    Camilo Laiton is a Computer Vision Engineer with a Masters in Computer Science at the{' '}
+                                    <a 
+                                        href="https://medellin.unal.edu.co/" 
+                                        target="_blank" 
+                                        rel="noreferrer" 
+                                        className="a-item"
+                                    >
+                                        National University of Colombia - Medellín.
+                                    </a>{' '}
+                                    His research was conducted under the supervision of{' '}
+                                    <a 
+                                        href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000479918" 
+                                        target="_blank" 
+                                        rel="noreferrer" 
+                                        className="a-item"
+                                    >
+                                        Prof. German Sanchez
+                                    </a>{' '}
+                                    and{' '}
+                                    <a 
+                                        href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000027090" 
+                                        target="_blank" 
+                                        rel="noreferrer" 
+                                        className="a-item"
+                                    >
+                                        Prof. Jhon Branch
+                                    </a>.
+                                </p>
+                                <p>
+                                    He received the B.S. degree from the University of Magdalena in 2020 
+                                    from where he graduated with highest honors.
+                                </p>
+                                <p>
+                                    He has experience in deep learning, large-scale image processing, 
+                                    and computer vision with the goal of developing 
+                                    AI-based solutions to address real-world challenges.
+                                </p>
+
+                                <div className="current-position">
+                                    <p>
+                                        <strong>Current Position:</strong> Computer Vision Engineer at the{' '}
+                                        <a 
+                                            href="https://alleninstitute.org/person/camilo-laiton/" 
+                                            target="_blank" 
+                                            rel="noreferrer" 
+                                            className="a-item"
+                                        >
+                                            Allen Institute for Neural Dynamics
+                                        </a>
+                                        , where he focuses on developing scalable computer vision 
+                                        and machine learning solutions for neuroscience applications.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="languages-sidebar">
+                                <h3 className="languages-title">Languages</h3>
+                                <div className="languages-box">
+                                    {languageItems}
+                                </div>
+                            </div>
+                        </motion.div>
+                    </>
+                )}
+
+                {showHonors && (
+                    <>
+                        {showAbout && <motion.hr className="hr" variants={itemVariants} />}
+                        
+                        <motion.h1 variants={itemVariants}>
+                            Selected honors
+                        </motion.h1>
+
+                        <motion.div 
+                            className="honors"
+                            variants={itemVariants}
+                        >
+                            <ul>
+                                {honorItems}
+                            </ul>
+                        </motion.div>
+                    </>
+                )}
+
+                {showCertificates && (
+                    <>
+                        {(showAbout || showHonors) && <motion.hr className="hr" variants={itemVariants} />}
+                        
+                        <motion.h1 variants={itemVariants}>
+                            Certificates
+                        </motion.h1>
+
+                        <motion.div 
+                            className="certificates"
+                            variants={itemVariants}
+                        >
+                            <ul>
+                                {certificateItems}
+                            </ul>
+                        </motion.div>
+                    </>
+                )}
+            </div>
+        </motion.section>
+    );
+};
 
 export default About;

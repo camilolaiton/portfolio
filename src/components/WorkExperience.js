@@ -36,11 +36,11 @@ class WorkExperience extends Component {
                 return (
                     <VerticalTimelineElement
                             className="vertical-timeline-element--work"
-                            contentStyle={{ background: 'white', color: '#000', borderRadius: "30px"}}
-                            contentArrowStyle={{ borderRight: '7px solid white' }}
+                            contentStyle={{ background: 'var(--color-surface)', color: 'var(--color-text-primary)', borderRadius: "30px", border: '1px solid var(--color-surface-alt)'}}
+                            contentArrowStyle={{ borderRight: '7px solid var(--color-surface)' }}
                             date={item.startDate + " - " + item.endDate}
                             dateClassName="dateTimeElement"
-                            iconStyle={{ background: "#dadada", color: '#fff' }}
+                            iconStyle={{ background: "var(--color-primary)", color: '#fff', boxShadow: '0 0 0 4px var(--color-background), inset 0 2px 0 rgba(0,0,0,.08), 0 3px 0 4px rgba(0,0,0,.05)' }}
                             icon={<Icon icon={item.technologies[0].class}/> }
                             visible={false}
                             key={i}
@@ -80,7 +80,7 @@ class WorkExperience extends Component {
 
         return (
 
-            <div className="about col-md-12">
+            <div className="about col-md-12" id="work-experience">
                 <hr className="hr"/>
                 <h1>
                     <span>Work experience</span>
