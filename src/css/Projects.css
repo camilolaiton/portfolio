@@ -156,6 +156,13 @@
   margin-bottom: var(--spacing-md);
 }
 
+.project-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+
 .project-category {
   display: flex;
   align-items: center;

@@ -33,7 +33,13 @@ const Projects = () => {
     const categories = ['all', ...Object.keys(projectsData.project_categories)];
     const filteredProjects = selectedCategory === 'all' 
         ? projectsData.featured_projects
-        : projectsData.featured_projects.filter(project => project.category === selectedCategory);
+        : projectsData.featured_projects.filter(project => {
+            // Handle both single category (string) and multiple categories (array)
+            const projectCategories = Array.isArray(project.category) 
+                ? project.category 
+                : [project.category];
+            return projectCategories.includes(selectedCategory);
+        });
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -56,7 +62,11 @@ const Projects = () => {
     };
 
     const ProjectCard = ({ project }) => {
-        const categoryData = projectsData.project_categories[project.category];
+        // Handle both single category (string) and multiple categories (array)
+        const projectCategories = Array.isArray(project.category) 
+            ? project.category 
+            : [project.category];
+        
         const featuredImage = project.images.find(img => img.is_featured) || project.images[0];
 
         // Helper function to determine if URL is external
@@ -93,9 +103,16 @@ const Projects = () => {
                 
                 <div className="project-content">
                     <div className="project-header">
-                        <div className="project-category" style={{ color: categoryData.color }}>
-                            <Icon icon={categoryData.icon} height={16} />
-                            {categoryData.name}
+                        <div className="project-categories">
+                            {projectCategories.map(cat => {
+                                const categoryData = projectsData.project_categories[cat];
+                                return categoryData ? (
+                                    <div key={cat} className="project-category" style={{ color: categoryData.color }}>
+                                        <Icon icon={categoryData.icon} height={16} />
+                                        {categoryData.name}
+                                    </div>
+                                ) : null;
+                            })}
                         </div>
                         <div className="project-status">
                             <span className={`status-badge ${project.status}`}>
@@ -112,7 +129,7 @@ const Projects = () => {
                             const techData = projectsData.technology_stack[tech];
                             return techData ? (
                                 <div key={tech} className="tech-badge" title={techData.name}>
-                                    <Icon icon={techData.icon} height={20} />
+                                    <Icon icon={techData.icon} color={techData.color} height={20} />
                                 </div>
                             ) : null;
                         })}
@@ -149,7 +166,10 @@ const Projects = () => {
     const ProjectModal = ({ project, onClose }) => {
         if (!project) return null;
 
-        const categoryData = projectsData.project_categories[project.category];
+        // Handle both single category (string) and multiple categories (array)
+        const projectCategories = Array.isArray(project.category) 
+            ? project.category 
+            : [project.category];
 
         // Helper function to determine if URL is external
         const getImageSrc = (imageUrl) => {
@@ -183,15 +203,22 @@ const Projects = () => {
                     </button>
                     
                     <div className="modal-header">
-                        <div className="project-category" style={{ color: categoryData.color }}>
-                            <Icon icon={categoryData.icon} height={20} />
-                            {categoryData.name}
+                        <div className="project-categories">
+                            {projectCategories.map(cat => {
+                                const categoryData = projectsData.project_categories[cat];
+                                return categoryData ? (
+                                    <div key={cat} className="project-category" style={{ color: categoryData.color }}>
+                                        <Icon icon={categoryData.icon} height={20} />
+                                        {categoryData.name}
+                                    </div>
+                                ) : null;
+                            })}
                         </div>
                         <h2>{project.title}</h2>
                         <p>{project.short_description}</p>
                     </div>
                     
-                    {console.log(project)}
+                    {/* {console.log(project)} */}
 
                     {project.images.length > 0 && (
                         <div className="modal-gallery">
@@ -199,7 +226,7 @@ const Projects = () => {
                                 modules={[Navigation, Pagination, Autoplay]}
                                 navigation
                                 pagination={{ clickable: true }}
-                                autoplay={{ delay: 4000, disableOnInteraction: false }}
+                                autoplay={{ delay: 5000, disableOnInteraction: false }}
                                 className="project-swiper"
                             >
                                 {project.images.map((image, index) => (
@@ -237,7 +264,7 @@ const Projects = () => {
                                     const techData = projectsData.technology_stack[tech];
                                     return techData ? (
                                         <div key={tech} className="tech-item">
-                                            <Icon icon={techData.icon} height={24} />
+                                            <Icon icon={techData.icon} color={techData.color} height={24} />
                                             <span>{techData.name}</span>
                                         </div>
                                     ) : null;

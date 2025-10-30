@@ -357,6 +357,65 @@
           "desc": "Distribution of the selected papers by decision and planification techniques domain"
         }
       ]
+    },
+    {
+      "id": "4",
+      "startDate": "06/2022",
+      "endDate": "06/2025",
+      "topics": [
+        "Deep Learning",
+        "Lightsheet whole-brain",
+        "Cell detection"
+      ],
+      "technologies": [
+        {
+          "name": "Pytorch",
+          "class": "logos:pytorch",
+          "color": "white"
+        },
+        {
+          "name": "Python",
+          "class": "logos:python",
+          "color": ""
+        },
+        {
+          "name": "AWS",
+          "class": "logos:aws",
+          "color": ""
+        },
+        {
+          "name": "NextFlow",
+          "class": "vscode-icons:file-type-nextflow",
+          "color": ""
+        },
+        {
+          "name": "Docker",
+          "class": "logos:docker",
+          "color": ""
+        }
+      ],
+      "researchGroup": "Neural Dynamics",
+      "organization": "Allen Institute",
+      "tutors": [
+        {
+          "name": "Prof. Sharmishtaa Seshamani",
+          "cvlac": "https://alleninstitute.org/person/sharmishtaa-seshamani/"
+        }
+      ],
+      "spanish": {
+        "title": "Pipeline de procesamiento de datos para imagenes microscopicas cerebrales de gran escala"
+      },
+      "english": {
+        "title": "A large-scale image processing pipeline for whole-brain light-sheet microscopy data identifying cell locations and brain structures in Terabytes of data."
+      },
+      "pubs": [
+        {
+          "title": "A Scalable, modular pipeline for automated processing and segmentation for whole-brain light microscopy data",
+          "url": "https://academic.oup.com/mam/article/30/Supplement_1/ozae044.216/7719767?login=false",
+          "state": "Preparing for publication"
+        }
+      ],
+      "images": []
     }
   ],
   "projects": [
