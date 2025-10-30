@@ -14,6 +14,17 @@ const handleDragStart = (e) => e.preventDefault();
 
 class ResearchExperience extends Component {
     
+    // Helper function to determine if URL is external
+    getImageSrc(imageUrl) {
+        if (!imageUrl) return '';
+        // Check if it's an external URL (starts with http:// or https://)
+        if (imageUrl.startsWith('http://') || imageUrl.startsWith('https://')) {
+            return imageUrl;
+        }
+        // Otherwise, treat as local path
+        return process.env.PUBLIC_URL + '/' + imageUrl;
+    }
+    
     render () {
 
         if (this.props.researchInfo) {
@@ -64,7 +75,7 @@ class ResearchExperience extends Component {
                         <React.Fragment key={rkey}>  {/* Move key here! */}
                             <img 
                                 className="d-block w-100 sliderimg" 
-                                src={process.env.PUBLIC_URL + '/' + image.url} 
+                                src={this.getImageSrc(image.url)} 
                                 alt={image.desc}
                                 title="Click to expand" 
                                 onDragStart={handleDragStart}
@@ -76,7 +87,7 @@ class ResearchExperience extends Component {
                             />
                         </React.Fragment>
                     )
-                });
+                }.bind(this));
 
                 var modals = item.images.map(function(image, rkey) {
                     return (
@@ -91,7 +102,7 @@ class ResearchExperience extends Component {
                                     <div className="modal-body">
                                     <img 
                                         className="d-block w-200 sliderimgzoomed zoom" 
-                                        src={process.env.PUBLIC_URL + '/' + image.url} 
+                                        src={this.getImageSrc(image.url)} 
                                         alt={image.desc}
                                         title="Click to expand"
                                     />
@@ -108,7 +119,7 @@ class ResearchExperience extends Component {
                             </div>
                         </React.Fragment>
                     )
-                });
+                }.bind(this));
 
                 return (
                     <React.Fragment key={i}>

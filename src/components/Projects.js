@@ -59,6 +59,17 @@ const Projects = () => {
         const categoryData = projectsData.project_categories[project.category];
         const featuredImage = project.images.find(img => img.is_featured) || project.images[0];
 
+        // Helper function to determine if URL is external
+        const getImageSrc = (imageUrl) => {
+            if (!imageUrl) return '';
+            // Check if it's an external URL (starts with http:// or https://)
+            if (imageUrl.startsWith('http://') || imageUrl.startsWith('https://')) {
+                return imageUrl;
+            }
+            // Otherwise, treat as local path
+            return `${process.env.PUBLIC_URL}/${imageUrl}`;
+        };
+
         return (
             <motion.div
                 className="project-card"
@@ -69,7 +80,7 @@ const Projects = () => {
                 {featuredImage && (
                     <div className="project-image">
                         <img 
-                            src={`${process.env.PUBLIC_URL}/${featuredImage.url}`}
+                            src={getImageSrc(featuredImage.url)}
                             alt={featuredImage.title}
                             loading="lazy"
                         />
@@ -140,6 +151,18 @@ const Projects = () => {
 
         const categoryData = projectsData.project_categories[project.category];
 
+        // Helper function to determine if URL is external
+        const getImageSrc = (imageUrl) => {
+            if (!imageUrl) return '';
+            // Check if it's an external URL (starts with http:// or https://)
+
+            if (imageUrl.startsWith('http://') || imageUrl.startsWith('https://')) {
+                return imageUrl;
+            }
+            // Otherwise, treat as local path
+            return `${process.env.PUBLIC_URL}/${imageUrl}`;
+        };
+
         return (
             <motion.div
                 className="project-modal-overlay"
@@ -167,6 +190,8 @@ const Projects = () => {
                         <h2>{project.title}</h2>
                         <p>{project.short_description}</p>
                     </div>
+                    
+                    {console.log(project)}
 
                     {project.images.length > 0 && (
                         <div className="modal-gallery">
@@ -181,7 +206,7 @@ const Projects = () => {
                                     <SwiperSlide key={index}>
                                         <div className="gallery-slide">
                                             <img 
-                                                src={`${process.env.PUBLIC_URL}/${image.url}`}
+                                                src={getImageSrc(image.url)}
                                                 alt={image.title}
                                             />
                                             <div className="slide-caption">

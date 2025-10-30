@@ -99,7 +99,24 @@
       "github_url": "",
       "demo_url": "",
       "paper_url": "https://doi.org/10.3390/s22072491",
-      "images": [],
+      "images": [
+        {
+          "url": "https://www.mdpi.com/sensors/sensors-22-02491/article_deploy/html/images/sensors-22-02491-g007.png",
+          "desc": "Ideal train platform for passenger flow"
+        },
+        {
+            "url": "https://www.mdpi.com/sensors/sensors-22-02491/article_deploy/html/images/sensors-22-02491-g010.png",
+            "desc": "Physical architecture for obtaining train real-time data for a decision-support approach"
+        },
+        {
+            "url": "https://www.mdpi.com/sensors/sensors-22-02491/article_deploy/html/images/sensors-22-02491-g008.png",
+            "desc": "Travel connectivity architecture"
+        },
+        {
+            "url": "https://www.mdpi.com/sensors/sensors-22-02491/article_deploy/html/images/sensors-22-02491-g011.png",
+            "desc": "Number of articles per industry 4.0 technology"
+        }
+      ],
       "highlights": [
         "Comprehensive systematic review",
         "150+ papers analyzed",
