@@ -1,0 +1,403 @@
+{
+  "featured_projects": [
+    {
+      "id": "protein-prediction",
+      "title": "Label-free Prediction of Protein Localization from Structural Signals in Lightsheet Microscopy Using a Cloud-Based Workflow",
+      "category": ["research", "deep-learning"],
+      "featured": true,
+      "status": "in-progress",
+      "start_date": "2025",
+      "end_date": "To be determined",
+      "short_description": "We aim to predict protein localization from pan-protein signals in LICONN lightsheet microscopy.",
+      "technologies": ["pytorch", "python", "dask"],
+      "github_url": "",
+      "demo_url": "https://tinyurl.com/2vxxaba2",
+      "paper_url": "",
+      "images": [
+        {
+          "url": "images/protein_prediction/protein_prediction.png",
+          "title": "Protein prediction",
+          "description": "PSD95 protein localization prediction from pan-protein signal.",
+          "is_featured": true
+        }
+      ],
+      "highlights": [
+        "Neural synapse localization",
+        "Scalable prediction of proteins",
+        "Bassoon and PSD95 proteins",
+        "Large-scale lightsheet data"
+      ]
+    },
+    {
+      "id": "foundational-model",
+      "title": "Towards a Foundational 3D Image Encoder for Multi-Resolution Biological Understanding in Lightsheet Microscopy",
+      "category": ["research", "deep-learning"],
+      "featured": true,
+      "status": "in-progress",
+      "start_date": "2024",
+      "end_date": "To be determined",
+      "short_description": "We aim to create a foundational 3D image encoder model that can effectively capture multi-resolution features from lightsheet microscopy data, enabling advanced biological understanding and analysis.",
+      "technologies": ["pytorch", "python", "dask"],
+      "github_url": "",
+      "demo_url": "",
+      "paper_url": "",
+      "images": [
+        {
+          "url": "images/foundational_model/foundational_model_diagram.png",
+          "title": "Foundational Model Diagram",
+          "description": "Diagram illustrating the architecture of the proposed foundational 3D image encoder for lightsheet microscopy data.",
+          "is_featured": true
+        },
+        {
+          "url": "images/foundational_model/some_downstream_tasks.png",
+          "title": "Some Downstream Tasks",
+          "description": "Diagram illustrating some inital exploration in downstream tasks that can be performed using the foundational 3D image encoder.",
+          "is_featured": true
+        }
+      ],
+      "highlights": [
+        "Foundational 3D image encoder",
+        "High-resolution feature extraction",
+        "Downstream biological analysis capabilities",
+        "Multi-Resolution feature learning"
+      ]
+    },
+    {
+      "id": "smartspim-pipeline",
+      "title": "A Scalable, modular pipeline for automated processing and segmentation for whole-brain light microscopy data",
+      "category": ["research", "deep-learning"],
+      "featured": true,
+      "status": "completed",
+      "start_date": "2022",
+      "end_date": "2024",
+      "short_description": "Image processing pipeline using cloud computing resources. It performs denoising, stitching, image registration to the Allen Atlas, cell detection and cell quantification.",
+      "technologies": ["pytorch", "python", "nextflow", "docker", "aws"],
+      "github_url": "https://github.com/AllenNeuralDynamics/aind-smartspim-pipeline",
+      "demo_url": "https://tinyurl.com/c2nhsrx3",
+      "paper_url": "https://academic.oup.com/mam/article/30/Supplement_1/ozae044.216/7719767?login=false",
+      "images": [
+        {
+          "url": "images/smartspim_pipeline/pipeline_overview.png", 
+          "title": "Pipeline Overview",
+          "description": "Overview of the most important steps in the lightsheet image processing pipeline.",
+          "is_featured": true
+        },
+        {
+          "url": "https://tinyurl.com/39ffcyks",
+          "title": "Lightsheet Pipeline",
+          "description": "Steps for lightsheet image processing pipeline",
+          "is_featured": true
+        },
+        {
+          "url": "images/smartspim_pipeline/cell_detection.png", 
+          "title": "Cell Detection",
+          "description": "Cell detection output in the lightsheet image processing pipeline.",
+          "is_featured": true
+        }
+      ],
+      "highlights": [
+        "Cloud image processing pipeline",
+        "Cell detection using deep learning",
+        "Identification of brain structures using the Allen V3 CCF Atlas.",
+        "Quantification of cells in different brain regions"
+      ]
+    },
+    {
+      "id": "large-scale-cellpose",
+      "title": "Large-Scale Cellpose: A package for scalable cell segmentation in large microscopy datasets",
+      "category": ["deep-learning", "computer-vision"],
+      "featured": true,
+      "status": "completed",
+      "start_date": "2024",
+      "end_date": "2024",
+      "short_description": "A package for running cellpose in large microscopy datasets using cloud computing resources.",
+      "technologies": ["pytorch", "python"],
+      "github_url": "https://github.com/AllenNeuralDynamics/aind-large-scale-cellpose",
+      "demo_url": "",
+      "paper_url": "https://github.com/AllenNeuralDynamics/aind-large-scale-cellpose",
+      "images": [
+        {
+          "url": "images/large_scale_cellpose/large_scale_inference.png",
+          "title": "Fast Cellpose Inference",
+          "description": "Large-scale cellpose inference at 1 um resolution.",
+          "is_featured": true
+        },
+        {
+          "url": "images/large_scale_cellpose/performance.png",
+          "title": "Segmentation Performance",
+          "description": "Optimization of the segmentation performance. Rewrote cellpose to be more optimal.",
+          "is_featured": true
+        },
+        {
+          "url": "images/large_scale_cellpose/global_norm.png",
+          "title": "Global Normalization Effect",
+          "description": "Local vs Global normalization effect on cellpose segmentation.",
+          "is_featured": true
+        },
+        {
+          "url": "images/large_scale_cellpose/nuclear_channel_influence.png",
+          "title": "Nuclear Channel Influence",
+          "description": "Impact of nuclear channel on cellpose segmentation.",
+          "is_featured": true
+        }
+      ],
+      "highlights": [
+        "Large-scale cellpose",
+        "Fast cell segmentation",
+        "Provides cell centroids and masks",
+        "Compatible with OMEZarr and cloud computing resources"
+      ]
+    },
+    {
+      "id": "large-scale-rna-detection",
+      "title": "Large-Scale RNA Detection: A package for scalable RNA detection in large microscopy datasets",
+      "category": ["computer-vision"],
+      "featured": true,
+      "status": "completed",
+      "start_date": "2024",
+      "end_date": "2024",
+      "short_description": "A package for running RNA detection in large microscopy datasets using cloud computing resources.",
+      "technologies": ["pytorch", "python"],
+      "github_url": "https://github.com/AllenNeuralDynamics/aind-z1-spot-detection",
+      "demo_url": "",
+      "paper_url": "",
+      "images": [
+        {
+          "url": "images/rna_detection/RNA_detection.png",
+          "title": "Fast RNA Detection Inference",
+          "description": "Large-scale RNA detection.",
+          "is_featured": true
+        }
+      ],
+      "highlights": [
+        "Large-scale RNA detection",
+        "Fast RNA detection",
+        "Provides RNA spot locations",
+        "Compatible with OMEZarr and cloud computing resources"
+      ]
+    },
+    {
+      "id": "brain-segmentation",
+      "title": "3D Brain MRI Segmentation with Self-Attention",
+      "category": ["deep-learning", "computer-vision"],
+      "featured": true,
+      "status": "completed",
+      "start_date": "2021-04",
+      "end_date": "2022-02",
+      "short_description": "Deep 3D neural network for brain structures segmentation using self-attention modules in MRI images.",
+      "technologies": ["pytorch", "python", "tensorflow"],
+      "github_url": "https://github.com/camilolaiton/SelfAttention3DBrainSegmentation",
+      "demo_url": "",
+      "paper_url": "https://www.mdpi.com/1424-8220/22/7/2559",
+      "images": [
+        {
+          "url": "images/master_thesis/axial.gif",
+          "title": "Axial Plane Segmentation",
+          "description": "Segmented brain MRI in the axial plane using the proposed architecture.",
+          "is_featured": true
+        },
+        {
+          "url": "images/master_thesis/coronal.gif", 
+          "title": "Coronal Plane Segmentation",
+          "description": "Segmented brain MRI in the coronal plane using the proposed architecture."
+        },
+        {
+          "url": "images/master_thesis/saggital.gif",
+          "title": "Sagittal Plane Segmentation", 
+          "description": "Segmented brain MRI in the sagittal plane using the proposed architecture."
+        },
+        {
+          "url": "images/master_thesis/proposed_architecture.jpg",
+          "title": "Architecture Diagram",
+          "description": "Proposed 3D deep neural network architecture for the segmentation of 37 brain structures."
+        },
+        {
+          "url": "images/master_thesis/3d_brain.png",
+          "title": "3D Brain Visualization",
+          "description": "Segmented brain using the proposed architecture in a 3D visual representation."
+        }
+      ],
+      "highlights": [
+        "Published in Sensors Journal (Q1 - JCR)",
+        "Novel 3D self-attention architecture",
+        "37 brain structures segmentation",
+        "State-of-the-art performance"
+      ]
+    },
+    {
+      "id": "traffic-signal-optimization",
+      "title": "AI-Based Traffic Signal Optimization",
+      "category": ["computer-vision", "deep-learning"],
+      "featured": true,
+      "status": "completed",
+      "start_date": "2019-12",
+      "end_date": "2020-12",
+      "short_description": "CNN-based model for dynamic traffic signal timing estimation at urban intersections.",
+      "technologies": ["tensorflow", "opencv", "python", "keras", "sumo"],
+      "github_url": "",
+      "demo_url": "",
+      "paper_url": "http://www.arpnjournals.org/jeas/research_papers/rp_2022/jeas_0122_8822.pdf",
+      "images": [
+        {
+          "url": "images/undergrad_thesis/architecture.png",
+          "title": "Algorithm Architecture",
+          "description": "Proposed algorithm architecture for traffic signal optimization.",
+          "is_featured": true
+        },
+        {
+          "url": "images/undergrad_thesis/simulation.png",
+          "title": "SUMO Simulation",
+          "description": "Simulation of the proposed solution using SUMO simulator."
+        },
+        {
+          "url": "images/undergrad_thesis/classification.png",
+          "title": "Vehicle Classification",
+          "description": "Car classification using YOLOv3 model trained with COCO dataset."
+        }
+      ],
+      "highlights": [
+        "Real-time traffic optimization",
+        "YOLO-based vehicle detection",
+        "SUMO simulation validation",
+        "Reduced traffic congestion by 30%"
+      ]
+    },
+    {
+      "id": "rail-industry-40",
+      "title": "Industry 4.0 in Rail Transportation",
+      "category": "research",
+      "featured": false,
+      "status": "completed",
+      "start_date": "2021-09",
+      "end_date": "2022-01",
+      "short_description": "Systematic literature review on Industry 4.0 technologies applied to rail transportation.",
+      "technologies": ["research"],
+      "github_url": "",
+      "demo_url": "",
+      "paper_url": "https://doi.org/10.3390/s22072491",
+      "images": [
+        {
+          "url": "https://www.mdpi.com/sensors/sensors-22-02491/article_deploy/html/images/sensors-22-02491-g007.png",
+          "desc": "Ideal train platform for passenger flow"
+        },
+        {
+            "url": "https://www.mdpi.com/sensors/sensors-22-02491/article_deploy/html/images/sensors-22-02491-g010.png",
+            "desc": "Physical architecture for obtaining train real-time data for a decision-support approach"
+        },
+        {
+            "url": "https://www.mdpi.com/sensors/sensors-22-02491/article_deploy/html/images/sensors-22-02491-g008.png",
+            "desc": "Travel connectivity architecture"
+        },
+        {
+            "url": "https://www.mdpi.com/sensors/sensors-22-02491/article_deploy/html/images/sensors-22-02491-g011.png",
+            "desc": "Number of articles per industry 4.0 technology"
+        }
+      ],
+      "highlights": [
+        "Comprehensive systematic review",
+        "150+ papers analyzed",
+        "Technology taxonomy created",
+        "Future research directions identified"
+      ]
+    }
+  ],
+  "project_categories": {
+    "deep-learning": {
+      "name": "Deep Learning",
+      "color": "#3b82f6",
+      "icon": "hugeicons:artificial-intelligence-04"
+    },
+    "computer-vision": {
+      "name": "Computer Vision", 
+      "color": "#10b981",
+      "icon": "mdi:image-search-outline"
+    },
+    "research": {
+      "name": "Research",
+      "color": "#8b5cf6",
+      "icon": "emojione:books"
+    }
+  },
+  "technology_stack": {
+    "pytorch": {
+      "name": "PyTorch",
+      "icon": "logos:pytorch",
+      "color": "#ee4c2c"
+    },
+    "dask": {
+      "name": "Dask",
+      "icon": "simple-icons:dask",
+      "color": "orange"
+    },
+    "tensorflow": {
+      "name": "TensorFlow", 
+      "icon": "logos:tensorflow",
+      "color": "#ff6f00"
+    },
+    "python": {
+      "name": "Python",
+      "icon": "logos:python", 
+      "color": "#3776ab"
+    },
+    "opencv": {
+      "name": "OpenCV",
+      "icon": "logos:opencv",
+      "color": "#5c3ee8"
+    },
+    "keras": {
+      "name": "Keras",
+      "icon": "cib:keras",
+      "color": "#d00000"
+    },
+    "react": {
+      "name": "React",
+      "icon": "logos:react",
+      "color": "#61dafb"
+    },
+    "medical-imaging": {
+      "name": "Medical Imaging",
+      "icon": "medical-icon:i-radiology",
+      "color": "#059669"
+    },
+    "sumo": {
+      "name": "SUMO Simulator",
+      "icon": "cryptocurrency:sumo",
+      "color": "#ff6600"
+    },
+    "nextflow": {
+      "name": "NextFlow",
+      "icon": "vscode-icons:file-type-nextflow",
+      "color": ""
+    },
+    "docker": {
+        "name": "Docker",
+        "icon": "logos:docker",
+        "color": ""
+    },
+    "aws": {
+        "name": "AWS",
+        "icon": "logos:aws",
+        "color": ""
+    },
+    "cell": {
+        "name": "Cell-level analysis",
+        "icon": "streamline-color:bacteria-virus-cells-biology-flat",
+        "color": ""
+    },
+    "research": {
+      "name": "Research",
+      "icon": "noto:books",
+      "color": "#6366f1"
+    },
+    "systematic-review": {
+      "name": "Systematic Review",
+      "icon": "noto:books",
+      "color": "#8b5cf6"
+    },
+    "brain":{
+        "name": "Neuroscience",
+        "icon": "twemoji:brain",
+        "color": ""
+    }
+  }
+}

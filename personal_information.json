@@ -1,584 +1,234 @@
 {
-    "choose_lang": {
-        "english": "Select portfolio language",
-        "spanish": "Escoja el idioma del portfolio"
+  "choose_lang": {
+    "english": "Select portfolio language",
+    "spanish": "Escoja el idioma del portfolio"
+  },
+  "name": "Camilo Laiton",
+  "titles": [
+    "Machine Learning Developer",
+    "Deep Learning Researcher",
+    "React Developer",
+    "Language Lover",
+    "Fifth Item"
+  ],
+  "speakLanguages": [
+    {
+      "name": "Spanish",
+      "class": "emojione:flag-for-spain",
+      "level": "Native - C2"
     },
-    "name": "Camilo Laiton",
-    "titles": [
-        "Machine Learning Developer", 
-        "Deep Learning Researcher", 
-        "React Developer", 
-        "Language Lover",
-        "Fifth Item"
-    ],
-    "speakLanguages": [
-        {
-            "name": "Spanish",
-            "class": "emojione:flag-for-spain",
-            "level": "Native - C2"
-        },
-        {
-            "name": "English",
-            "class": "emojione:flag-for-united-states",
-            "level": "Professional working proficiency - C1"
-        },
-        {
-            "name": "French",
-            "class": "emojione:flag-for-france",
-            "level": "Professional working proficiency - B2"
-        }
-    ],
-    "honors": [
-      {
-        "honor": "BEDA Scholarship recipient awarded for maintaining a 5.0/5.0 GPA in the Masters program.",
-        "year": "2021-2022"
-      },
-      {
-        "honor": "Suma Cum Laude, University of Magdalena.",
-        "year": 2020
-      },
-      {
-        "honor": "Recognition for undergrad thesis research.",
-        "year": 2020
-      },
-      {
-        "honor": "Scholarship for Postgraduate Studies for having highest academic GPA average (450/500) in the program of Systems Engineering at the University of Magdalena.",
-        "year": 2020
-      },
-      {
-        "honor": "French Language Scholarship (level B2) granted by the Alliance Française and French Goverment.",
-        "year": 2020
-      },
-      {
-        "honor": "French Language Scholarship (levels A1 to B1) granted by the University of Magdalena.",
-        "year": 2019
-      },
-      {
-        "honor": "Facebook-Plazti Developers Scholarship.",
-        "year": 2019
-      },
-      {
-        "honor": "Academic Scholarship - Highest GPA in the department of Systems Engineering at the University of Magdalena.",
-        "year": "2016-2020"
-      },
-      {
-        "honor": "Best academic GPA in the Systems Engineering program.",
-        "year": 2017
-      },
-      {
-        "honor": "Highest score on the admissions exam University of Magdalena.",
-        "year": 2016
-      }
-    ],
-    "certificates": [
-      {
-        "title": "Specialized program - From Data to Insights with Google Cloud (4 Courses)",
-        "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/E83CTR3Y4FVY",
-        "class": "cib:coursera",
-        "color": "blue"
-      },
-      {
-        "title": "Google Cloud Platform Fundamentals: Core Infrastructure",
-        "url": "https://www.coursera.org/account/accomplishments/certificate/7K4SZB5H7JBT",
-        "class": "cib:coursera",
-        "color": "blue"
-      },
-      {
-        "title": "DELF B2",
-        "url": "",
-        "class": "twemoji:flag-for-flag-france",
-        "color": ""
-      },
-      {
-        "title": "Specialized program - DeepLearning.AI TensorFlow Developer (4 Courses)",
-        "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/GY4LZ44MDF74",
-        "class": "cib:coursera",
-        "color": "blue"
-      },
-      {
-        "title": "PHP with Laravel",
-        "url": "https://platzi.com/@camilolaiton/curso/1467-course/diploma/detalle/",
-        "class": "simple-icons:platzi",
-        "color": "green"
-      },
-      {
-        "title": "React.js course",
-        "url": "https://platzi.com/@camilolaiton/curso/1548-react/diploma/detalle/",
-        "class": "simple-icons:platzi",
-        "color": "green"
-      },
-      {
-        "title": "Redux course",
-        "url": "https://platzi.com/@camilolaiton/curso/1613-redux/diploma/detalle/",
-        "class": "simple-icons:platzi",
-        "color": "green"
-      },
-      {
-        "title": "Git and Github profesional course",
-        "url": "https://platzi.com/@camilolaiton/curso/1557-git-github/diploma/detalle/",
-        "class": "simple-icons:platzi",
-        "color": "green"
-      }
-    ],
-    "social": [
-      {
-          "name": "github",
-          "url": "https://github.com/camilolaiton",
-          "class": "akar-icons:github-fill",
-          "color": "white"
-      },
-      {
-          "name": "instagram",
-          "url": "https://www.instagram.com/camilo_laiton",
-          "class": "raphael:instagram",
-          "color": "white"
-      },
-      {
-        "name": "linkedin",
-        "url": "https://www.linkedin.com/in/camilolaiton/",
-        "class": "akar-icons:linkedin-fill",
-        "color": "white"
-      }
-    ],
-    "profileImage": "CamiloLaiton.png",
-    "description": {
-        "english": "I'm Camilo Laiton, Masters student in Systems Engineering with substantial experience in deep learning, process development, image processing, and computer vision with the goal of developing AI-based solutions to address real-world challenges.",
-        "spanish": "Soy Camilo Laiton, Estudiante de maestría en Ingeniería de Sistemas con experiencia sustancial en aprendizaje profundo, desarrollo de procesos, procesamiento de imágenes y visión por computadora con el objetivo de desarrollar soluciones basadas en IA para abordar los desafíos del mundo real."
+    {
+      "name": "English",
+      "class": "emojione:flag-for-united-states",
+      "level": "Professional working proficiency - C1"
     },
-    "research": [
-      {
-        "id": "1",
-        "startDate": "12/2019",
-        "endDate": "12/2020",
-        "topics": ["Deep Learning", "Traffic Management", "CNNs", "Simulation"],
-        "technologies": [
-          {
-            "name": "Tensorflow",
-            "class": "logos:tensorflow",
-            "color": ""
-          },
-          {
-            "name": "OpenCV",
-            "class": "logos:opencv",
-            "color": ""
-          },
-          {
-            "name": "Python",
-            "class": "logos:python",
-            "color": ""
-          },
-          {
-            "name": "Keras",
-            "class": "cib:keras",
-            "color": "white"
-          },
-          {
-            "name": "Sumo simulator",
-            "class": "cryptocurrency:sumo",
-            "color": "white"
-          }
-        ],
-        "researchGroup": "GIDSYC",
-        "organization": "University of Magdalena",
-        "tutors": [
-          {
-            "name": "Prof. German Sanchez",
-            "cvlac": "https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000479918"
-          }
-        ],
-        "spanish": {
-          "title": "Un modelo computacional basado en aprendizaje profundo para estimación dinámica del tiempo de los semáforos en intersecciones urbanas simples"
+    {
+      "name": "French",
+      "class": "emojione:flag-for-france",
+      "level": "Professional working proficiency - B2"
+    }
+  ],
+  "honors": [
+    {
+      "honor": "BEDA Scholarship recipient awarded for maintaining a 5.0/5.0 GPA in the Masters program.",
+      "year": "2021-2022"
+    },
+    {
+      "honor": "Suma Cum Laude, University of Magdalena.",
+      "year": 2020
+    },
+    {
+      "honor": "Recognition for undergrad thesis research.",
+      "year": 2020
+    },
+    {
+      "honor": "Scholarship for Postgraduate Studies for having highest academic GPA average (450/500) in the program of Systems Engineering at the University of Magdalena.",
+      "year": 2020
+    },
+    {
+      "honor": "French Language Scholarship (level B2) granted by the Alliance Française and French Goverment.",
+      "year": 2020
+    },
+    {
+      "honor": "French Language Scholarship (levels A1 to B1) granted by the University of Magdalena.",
+      "year": 2019
+    },
+    {
+      "honor": "Facebook-Plazti Developers Scholarship.",
+      "year": 2019
+    },
+    {
+      "honor": "Academic Scholarship - Highest GPA in the department of Systems Engineering at the University of Magdalena.",
+      "year": "2016-2020"
+    },
+    {
+      "honor": "Best academic GPA in the Systems Engineering program.",
+      "year": 2017
+    },
+    {
+      "honor": "Highest score on the admissions exam University of Magdalena.",
+      "year": 2016
+    }
+  ],
+  "certificates": [
+    {
+      "title": "Specialized program - From Data to Insights with Google Cloud (4 Courses)",
+      "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/E83CTR3Y4FVY",
+      "class": "cib:coursera",
+      "color": "blue"
+    },
+    {
+      "title": "Google Cloud Platform Fundamentals: Core Infrastructure",
+      "url": "https://www.coursera.org/account/accomplishments/certificate/7K4SZB5H7JBT",
+      "class": "cib:coursera",
+      "color": "blue"
+    },
+    {
+      "title": "DELF B2",
+      "url": "",
+      "class": "twemoji:flag-for-flag-france",
+      "color": ""
+    },
+    {
+      "title": "Specialized program - DeepLearning.AI TensorFlow Developer (4 Courses)",
+      "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/GY4LZ44MDF74",
+      "class": "cib:coursera",
+      "color": "blue"
+    },
+    {
+      "title": "PHP with Laravel",
+      "url": "https://platzi.com/@camilolaiton/curso/1467-course/diploma/detalle/",
+      "class": "simple-icons:platzi",
+      "color": "green"
+    },
+    {
+      "title": "React.js course",
+      "url": "https://platzi.com/@camilolaiton/curso/1548-react/diploma/detalle/",
+      "class": "simple-icons:platzi",
+      "color": "green"
+    },
+    {
+      "title": "Redux course",
+      "url": "https://platzi.com/@camilolaiton/curso/1613-redux/diploma/detalle/",
+      "class": "simple-icons:platzi",
+      "color": "green"
+    },
+    {
+      "title": "Git and Github profesional course",
+      "url": "https://platzi.com/@camilolaiton/curso/1557-git-github/diploma/detalle/",
+      "class": "simple-icons:platzi",
+      "color": "green"
+    }
+  ],
+  "social": [
+    {
+      "name": "github",
+      "url": "https://github.com/camilolaiton",
+      "class": "akar-icons:github-fill",
+      "color": "white"
+    },
+    {
+      "name": "linkedin",
+      "url": "https://www.linkedin.com/in/camilolaiton/",
+      "class": "akar-icons:linkedin-fill",
+      "color": "white"
+    }
+  ],
+  "profileImage": "CamiloLaiton.png",
+  "description": {
+    "english": "I'm Camilo Laiton, Masters student in Systems Engineering with substantial experience in deep learning, process development, image processing, and computer vision with the goal of developing AI-based solutions to address real-world challenges.",
+    "spanish": "Soy Camilo Laiton, Estudiante de maestría en Ingeniería de Sistemas con experiencia sustancial en aprendizaje profundo, desarrollo de procesos, procesamiento de imágenes y visión por computadora con el objetivo de desarrollar soluciones basadas en IA para abordar los desafíos del mundo real."
+  },
+  "research": [
+    {
+      "id": "1",
+      "startDate": "12/2019",
+      "endDate": "12/2020",
+      "topics": [
+        "Deep Learning",
+        "Traffic Management",
+        "CNNs",
+        "Simulation"
+      ],
+      "technologies": [
+        {
+          "name": "Tensorflow",
+          "class": "logos:tensorflow",
+          "color": ""
         },
-        "english": {
-          "title": "A computational deep learning-based model for dynamic estimation of the traffic signal timing in simple urban intersections"
+        {
+          "name": "OpenCV",
+          "class": "logos:opencv",
+          "color": ""
         },
-        "pubs": [
-          {
-            "title": "A CNN-based model for dynamic traffic signal timing estimation at simple urban intersections",
-            "url":"http://www.arpnjournals.org/jeas/research_papers/rp_2022/jeas_0122_8822.pdf",
-            "state":"Published - ARPN Journals | 2022 Vol. 17 No. 1"
-          }
-        ],
-        "images": [
-          {
-            "url": "images/undergrad_thesis/architecture.png",
-            "desc": "Proposed algorithm architecture."
-          },
-          {
-            "url": "images/undergrad_thesis/simulation.png",
-            "desc": "Simulation of the proposed solution using SUMO simulator."
-          },
-          {
-            "url": "images/undergrad_thesis/classification.png",
-            "desc": "Car classification using YoloV3 model trained with COCO dataset."
-          }
-        ]
-      },
-      {
-        "id": "2",
-        "startDate": "04/2021",
-        "endDate": "02/2022",
-        "topics": ["Deep Learning", "Brain Segmentation", "Transformers", "3D Segmentation"],
-        "technologies": [
-          {
-            "name": "Pytorch",
-            "class": "logos:pytorch",
-            "color": "white"
-          },
-          {
-            "name": "Python",
-            "class": "logos:python",
-            "color": ""
-          },
-          {
-            "name": "Tensorflow",
-            "class": "logos:tensorflow",
-            "color": ""
-          }
-        ],
-        "researchGroup": "GIDIA",
-        "organization": "National University of Colombia",
-        "tutors": [
-          {
-            "name": "Prof. German Sanchez",
-            "cvlac": "https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000479918"
-          },
-          {
-            "name": "Prof. Jhon Branch",
-            "cvlac": "https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000027090"
-          }
-        ],
-        "spanish": {
-          "title": "Método para la segmentación de imágenes de resonancia magnética cerebrales utilizando una arquitectura de red neuronal basada en modelos de atención"
+        {
+          "name": "Python",
+          "class": "logos:python",
+          "color": ""
         },
-        "english": {
-          "title": "Method for the segmentation of brain magnetic resonance images using a neural network architecture based on attention models"
+        {
+          "name": "Keras",
+          "class": "cib:keras",
+          "color": "orangered"
         },
-        "pubs": [
-          {
-            "title": "Deep 3D neural network for brain structures segmentation using self-attention modules in MRI images",
-            "url":"https://www.mdpi.com/1424-8220/22/7/2559",
-            "state":"Published - Sensors Journal | DOI: 10.3390/s22072559"
-          },
-          {
-            "title": "Self-attention unet-based architecture for gray matter segmentation in brain imaging",
-            "url":"#",
-            "state":"Pending publication"
-          },
-          {
-            "title": "Skull stripping of MRI images using a deep 3D neural network with self-attention modules",
-            "url":"#",
-            "state":"Pending publication"
-          }
-        ],
-        "images": [
-          {
-            "url": "images/master_thesis/axial.gif",
-            "desc": "Segmented brain MRI in the axial plane using the proposed architecture."
-          },
-          {
-            "url": "images/master_thesis/coronal.gif",
-            "desc": "Segmented brain MRI in the coronal plane using the proposed architecture."
-          },
-          {
-            "url": "images/master_thesis/saggital.gif",
-            "desc": "Segmented brain MRI in the saggital plane using the proposed architecture."
-          },
-          {
-            "url": "images/master_thesis/proposed_architecture.jpg",
-            "desc": "Proposed 3D deep neural network architecture for the segmentation of 37 brain structures."
-          },
-          {
-            "url": "images/master_thesis/3d_brain.png",
-            "desc": "Segmented brain using the proposed architecture in a 3d visual representation."
-          }
-        ]
-      },
-      {
-        "id": "3",
-        "startDate": "09/2021",
-        "endDate": "01/2022",
-        "topics": ["Rail Transportation", "Industry 4.0", "Systematic Literature Review"],
-        "technologies": [
-          {
-            "name": "Digital Libraries",
-            "class": "noto:books",
-            "color": ""
-          }
-        ],
-        "researchGroup": "GIDIA",
-        "organization": "National University of Colombia",
-        "tutors": [
-          {
-            "name": "Prof. Jhon Branch",
-            "cvlac": "https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000027090"
-          }
-        ],
-        "spanish": {
-          "title": "Revisión sistemática de la literatura sobre las tecnologías de la industria 4.0 aplicado al transporte ferroviario"
-        },
-        "english": {
-          "title": "Industry 4.0 technologies applied to the rail transportation industry: A Systematic Review"
-        },
-        "pubs": [
-          {
-            "title": "Industry 4.0 technologies applied to the rail transportation industry: A Systematic Review",
-            "url":"https://doi.org/10.3390/s22072491",
-            "state":"Published - Sensors Journal | DOI: 10.3390/s22072491"
-          }
-        ],
-        "images": [
-          {
-            "url": "images/ferrofluvial/summary_protocol.jpg",
-            "desc": "Summary review protocol "
-          },
-          {
-            "url": "images/ferrofluvial/application_domains.png",
-            "desc": "Distribution of the selected papers by application domain"
-          },
-          {
-            "url": "images/ferrofluvial/monitoring_domain.png",
-            "desc": "Distribution of the selected papers by monitoring domain"
-          },
-          {
-            "url": "images/ferrofluvial/communication_security_domain.png",
-            "desc": "Distribution of the selected papers by communication and security domain"
-          },
-          {
-            "url": "images/ferrofluvial/decision_planification_domain.png",
-            "desc": "Distribution of the selected papers by decision and planification techniques domain"
-          }
-        ]
-      }
-    ],
-    "projects": [
-      {
-        "startDate": "07/2020",
-        "endDate": "05/2021",
-        "location": "Santa Marta, Colombia",
-        "images": [],
-        "organization": "Ladys Confecciones S.A.S.",
-        "technologies": [
-          {
-            "name": "Laravel",
-            "class": "logos:laravel",
-            "color": ""
-          },
-          {
-            "name": "PHP",
-            "class": "vscode-icons:file-type-php2",
-            "color": ""
-          },
-          {
-            "name": "MySql",
-            "class": "logos:mysql",
-            "color": ""
-          },
-          {
-            "name": "JavaScript",
-            "class": "logos:javascript",
-            "color": ""
-          }
-        ],
-        "english": {
-          "title": "Web Developer",
-          "description": [
-              "Developed a web platform based on non-immersive virtual reality for the optimization of time and resources of the company Ladys Confecciones S.A.S.",
-              "Developed a memory-optimized 3D visualizer for clothing customization using Three.js",
-              "Implemented and deployed the 3D garment customization module",
-              "Named the best innovation project by SENA INNOVA in Colombia in 2019-2020"
-          ]
-        },
-        "spanish": {
-          "title": "Desarrollador Web",
-          "description": [
-              "Desarrollo una plataforma web basada en realidad virtual no inmersiva para la optimización de tiempo y recursos de la empresa Ladys Confecciones S.A.S. ",
-              "Desarrollo de un visualizador 3D optimizado en memoria para la personalización de ropa usando Three.js ",
-              "Implementación y despliegue del módulo de personalización de prendas en 3D",
-              "Elegido mejor proyecto de innovación por SENA INNOVA en Colombia en 2019-2020"
-          ]
+        {
+          "name": "Sumo simulator",
+          "class": "cryptocurrency:sumo",
+          "color": "lightblue"
         }
-      },
-      {
-        "startDate": "09/2020",
-        "endDate": "03/2021",
-        "location": "Medellín, Colombia",
-        "images": [],
-        "organization": "National University of Colombia",
-        "technologies": [
-          {
-            "name": "Azure Datafactory",
-            "class": "vscode-icons:file-type-azure",
-            "color": ""
-          },
-          {
-            "name": "Azure Databricks",
-            "class": "simple-icons:databricks",
-            "color": "orangered"
-          },
-          {
-            "name": "MySql",
-            "class": "logos:mysql",
-            "color": ""
-          },
-          {
-            "name": "Python",
-            "class": "logos:python",
-            "color": ""
-          },
-          {
-            "name": "Scala",
-            "class": "logos:scala",
-            "color": ""
-          },
-          {
-            "name": "Azure Power Apps",
-            "class": "mdi:microsoft-azure",
-            "color": "purple"
-          }
-        ],
-        "english": {
-          "title": "Data Engineer",
-          "description": [
-              "Implementation of a Geoscientific Data Lake for the Servicio Geológico Colombiano (SGC)",
-              "ETL process development with Azure Datafactory and Azure Databricks",
-              "App Development in Power Apps"
-          ]
-        },
-        "spanish": {
-          "title": "Ingeniero de datos",
-          "description": [
-              "Desarrollo una plataforma web basada en realidad virtual no inmersiva para la optimización de tiempo y recursos de la empresa Ladys Confecciones S.A.S. ",
-              "Desarrollo de un visualizador 3D optimizado en memoria para la personalización de ropa usando Three.js ",
-              "Implementación y despliegue del módulo de personalización de prendas en 3D",
-              "Elegido mejor proyecto de innovación por SENA INNOVA en Colombia en 2019-2020"
-          ]
+      ],
+      "researchGroup": "GIDSYC",
+      "organization": "University of Magdalena",
+      "tutors": [
+        {
+          "name": "Prof. German Sanchez",
+          "cvlac": "https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000479918"
         }
+      ],
+      "spanish": {
+        "title": "Un modelo computacional basado en aprendizaje profundo para estimación dinámica del tiempo de los semáforos en intersecciones urbanas simples"
       },
-      {
-        "startDate": "05/2021",
-        "endDate": "Present",
-        "location": "Medellín, Colombia",
-        "images": [],
-        "organization": "National University of Colombia",
-        "technologies": [
-          {
-            "name": "Jupyter Notebook",
-            "class": "logos:jupyter",
-            "color": ""
-          },
-          {
-            "name": "Pytorch",
-            "class": "logos:pytorch",
-            "color": ""
-          },
-          {
-            "name": "Python",
-            "class": "logos:python",
-            "color": ""
-          },
-          {
-            "name": "Tensorflow",
-            "class": "logos:tensorflow",
-            "color": ""
-          }
-        ],
-        "english": {
-          "title": "Tutor",
-          "description": [
-            "Tutor for the Master's subjects Intelligent Systems and Advanced Topics in Artificial Intelligence II in the department of Systems Engineering and Informatics at the National University of Colombia",
-            "Implementation of machine/deep learning models for classification, segmentation, object detection, among others"
-          ]
-        },
-        "spanish": {
-          "title": "Monitor",
-          "description": [
-              "Desarrollo una plataforma web basada en realidad virtual no inmersiva para la optimización de tiempo y recursos de la empresa Ladys Confecciones S.A.S. ",
-              "Desarrollo de un visualizador 3D optimizado en memoria para la personalización de ropa usando Three.js ",
-              "Implementación y despliegue del módulo de personalización de prendas en 3D",
-              "Elegido mejor proyecto de innovación por SENA INNOVA en Colombia en 2019-2020"
-          ]
-        }
+      "english": {
+        "title": "A computational deep learning-based model for dynamic estimation of the traffic signal timing in simple urban intersections"
       },
-      {
-        "startDate": "10/2021",
-        "endDate": "Present",
-        "location": "Cartagena, Colombia",
-        "images": [],
-        "organization": "Cotecmar",
-        "technologies": [
-          {
-            "name": "Digital Libraries",
-            "class": "noto:books",
-            "color": ""
-          }
-        ],
-        "english": {
-          "title": "Research Associate",
-          "description": [
-            "Designed a calculation tool based on simulation software that allows a technical analysis of electromobility solutions for rail-river transport",
-            "Provided support and analysis of dual-use technologies incorporating electromobility technologies available in the Colombian and international market, identifying the map of actors, costs of the proposals, and those responsible for the actions and the time required for their materialization"
-          ]
-        },
-        "spanish": {
-          "title": "Research Associate",
-          "description": [
-              "Desarrollo una plataforma web basada en realidad virtual no inmersiva para la optimización de tiempo y recursos de la empresa Ladys Confecciones S.A.S. ",
-              "Desarrollo de un visualizador 3D optimizado en memoria para la personalización de ropa usando Three.js ",
-              "Implementación y despliegue del módulo de personalización de prendas en 3D",
-              "Elegido mejor proyecto de innovación por SENA INNOVA en Colombia en 2019-2020"
-          ]
+      "pubs": [
+        {
+          "title": "A CNN-based model for dynamic traffic signal timing estimation at simple urban intersections",
+          "url": "http://www.arpnjournals.org/jeas/research_papers/rp_2022/jeas_0122_8822.pdf",
+          "state": "Published - ARPN Journals | 2022 Vol. 17 No. 1"
         }
-      },
-      {
-        "startDate": "04/2021",
-        "endDate": "Present",
-        "location": "Barranquilla, Colombia",
-        "images": [],
-        "organization": "Technological Instutute of Soledad Atlantico - ITSA",
-        "technologies": [
-          {
-            "name": "Linux",
-            "class": "logos:linux-tux",
-            "color": ""
-          },
-          {
-            "name": "Python",
-            "class": "logos:python",
-            "color": ""
-          },
-          {
-            "name": "FreeSurfer",
-            "class": "twemoji:brain",
-            "color": ""
-          },
-          {
-            "name": "FastSurfer",
-            "class": "openmoji:musicbrainz",
-            "color": ""
-          }
-        ],
-        "english": {
-          "title": "Software Developer",
-          "description": [
-            "Software Developer in a Multiparametric Intelligent System for the recognition of patterns associated with neurocognitive dysfunctions in young people",
-            "Reviewed the state of the art tools for the segmentation of brain anatomical structures",
-            "Installation of tools on Linux environments",
-            "Developed the intermediary module in Python for the automatic use of brain image segmentation tools"
-          ]
+      ],
+      "images": [
+        {
+          "url": "images/undergrad_thesis/architecture.png",
+          "desc": "Proposed algorithm architecture."
         },
-        "spanish": {
-          "title": "Desarrollador de software",
-          "description": [
-              "Desarrollo una plataforma web basada en realidad virtual no inmersiva para la optimización de tiempo y recursos de la empresa Ladys Confecciones S.A.S. ",
-              "Desarrollo de un visualizador 3D optimizado en memoria para la personalización de ropa usando Three.js ",
-              "Implementación y despliegue del módulo de personalización de prendas en 3D",
-              "Elegido mejor proyecto de innovación por SENA INNOVA en Colombia en 2019-2020"
-          ]
+        {
+          "url": "images/undergrad_thesis/simulation.png",
+          "desc": "Simulation of the proposed solution using SUMO simulator."
+        },
+        {
+          "url": "images/undergrad_thesis/classification.png",
+          "desc": "Car classification using YoloV3 model trained with COCO dataset."
         }
-      }
-    ],
-    "skills": [
+      ]
+    },
+    {
+      "id": "2",
+      "startDate": "04/2021",
+      "endDate": "02/2022",
+      "topics": [
+        "Deep Learning",
+        "Brain Segmentation",
+        "Transformers",
+        "3D Segmentation"
+      ],
+      "technologies": [
+        {
+          "name": "Pytorch",
+          "class": "logos:pytorch",
+          "color": "white"
+        },
         {
           "name": "Python",
           "class": "logos:python",
@@ -588,35 +238,465 @@
           "name": "Tensorflow",
           "class": "logos:tensorflow",
           "color": ""
+        }
+      ],
+      "researchGroup": "GIDIA",
+      "organization": "National University of Colombia",
+      "tutors": [
+        {
+          "name": "Prof. German Sanchez",
+          "cvlac": "https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000479918"
         },
         {
+          "name": "Prof. Jhon Branch",
+          "cvlac": "https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000027090"
+        }
+      ],
+      "spanish": {
+        "title": "Método para la segmentación de imágenes de resonancia magnética cerebrales utilizando una arquitectura de red neuronal basada en modelos de atención"
+      },
+      "english": {
+        "title": "Method for the segmentation of brain magnetic resonance images using a neural network architecture based on attention models"
+      },
+      "pubs": [
+        {
+          "title": "Deep 3D neural network for brain structures segmentation using self-attention modules in MRI images",
+          "url": "https://www.mdpi.com/1424-8220/22/7/2559",
+          "state": "Published - Sensors Journal | DOI: 10.3390/s22072559"
+        },
+        {
+          "title": "Self-attention unet-based architecture for gray matter segmentation in brain imaging",
+          "url": "#",
+          "state": "Pending publication"
+        },
+        {
+          "title": "Skull stripping of MRI images using a deep 3D neural network with self-attention modules",
+          "url": "#",
+          "state": "Pending publication"
+        }
+      ],
+      "images": [
+        {
+          "url": "images/master_thesis/axial.gif",
+          "desc": "Segmented brain MRI in the axial plane using the proposed architecture."
+        },
+        {
+          "url": "images/master_thesis/coronal.gif",
+          "desc": "Segmented brain MRI in the coronal plane using the proposed architecture."
+        },
+        {
+          "url": "images/master_thesis/saggital.gif",
+          "desc": "Segmented brain MRI in the saggital plane using the proposed architecture."
+        },
+        {
+          "url": "images/master_thesis/proposed_architecture.jpg",
+          "desc": "Proposed 3D deep neural network architecture for the segmentation of 37 brain structures."
+        },
+        {
+          "url": "images/master_thesis/3d_brain.png",
+          "desc": "Segmented brain using the proposed architecture in a 3d visual representation."
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "startDate": "09/2021",
+      "endDate": "01/2022",
+      "topics": [
+        "Rail Transportation",
+        "Industry 4.0",
+        "Systematic Literature Review"
+      ],
+      "technologies": [
+        {
+          "name": "Digital Libraries",
+          "class": "noto:books",
+          "color": ""
+        }
+      ],
+      "researchGroup": "GIDIA",
+      "organization": "National University of Colombia",
+      "tutors": [
+        {
+          "name": "Prof. Jhon Branch",
+          "cvlac": "https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000027090"
+        }
+      ],
+      "spanish": {
+        "title": "Revisión sistemática de la literatura sobre las tecnologías de la industria 4.0 aplicado al transporte ferroviario"
+      },
+      "english": {
+        "title": "Industry 4.0 technologies applied to the rail transportation industry: A Systematic Review"
+      },
+      "pubs": [
+        {
+          "title": "Industry 4.0 technologies applied to the rail transportation industry: A Systematic Review",
+          "url": "https://doi.org/10.3390/s22072491",
+          "state": "Published - Sensors Journal | DOI: 10.3390/s22072491"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://www.mdpi.com/sensors/sensors-22-02491/article_deploy/html/images/sensors-22-02491-g007.png",
+          "desc": "Ideal train platform for passenger flow"
+        },
+        {
+          "url": "images/ferrofluvial/application_domains.png",
+          "desc": "Distribution of the selected papers by application domain"
+        },
+        {
+          "url": "images/ferrofluvial/monitoring_domain.png",
+          "desc": "Distribution of the selected papers by monitoring domain"
+        },
+        {
+          "url": "images/ferrofluvial/communication_security_domain.png",
+          "desc": "Distribution of the selected papers by communication and security domain"
+        },
+        {
+          "url": "images/ferrofluvial/decision_planification_domain.png",
+          "desc": "Distribution of the selected papers by decision and planification techniques domain"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "startDate": "06/2022",
+      "endDate": "06/2025",
+      "topics": [
+        "Deep Learning",
+        "Lightsheet whole-brain",
+        "Cell detection"
+      ],
+      "technologies": [
+        {
           "name": "Pytorch",
+          "class": "logos:pytorch",
+          "color": "white"
+        },
+        {
+          "name": "Python",
+          "class": "logos:python",
+          "color": ""
+        },
+        {
+          "name": "AWS",
+          "class": "logos:aws",
+          "color": ""
+        },
+        {
+          "name": "NextFlow",
+          "class": "vscode-icons:file-type-nextflow",
+          "color": ""
+        },
+        {
+          "name": "Docker",
+          "class": "logos:docker",
+          "color": ""
+        }
+      ],
+      "researchGroup": "Neural Dynamics",
+      "organization": "Allen Institute",
+      "tutors": [
+        {
+          "name": "Prof. Sharmishtaa Seshamani",
+          "cvlac": "https://alleninstitute.org/person/sharmishtaa-seshamani/"
+        }
+      ],
+      "spanish": {
+        "title": "Pipeline de procesamiento de datos para imagenes microscopicas cerebrales de gran escala"
+      },
+      "english": {
+        "title": "A large-scale image processing pipeline for whole-brain light-sheet microscopy data identifying cell locations and brain structures in Terabytes of data."
+      },
+      "pubs": [
+        {
+          "title": "A Scalable, modular pipeline for automated processing and segmentation for whole-brain light microscopy data",
+          "url": "https://academic.oup.com/mam/article/30/Supplement_1/ozae044.216/7719767?login=false",
+          "state": "Preparing for publication"
+        }
+      ],
+      "images": []
+    }
+  ],
+  "projects": [
+    {
+      "startDate": "10/2023",
+      "endDate": "Present",
+      "location": "Seattle, WA, USA",
+      "images": [],
+      "organization": "Allen Institute for Neural Dynamics",
+      "technologies": [
+        {
+          "name": "Cell-level analysis",
+          "class": "streamline-color:bacteria-virus-cells-biology-flat",
+          "color": ""
+        },
+        {
+          "name": "",
           "class": "logos:pytorch",
           "color": ""
         },
         {
-          "name": "Databricks",
+          "name": "NextFlow",
+          "class": "vscode-icons:file-type-nextflow",
+          "color": ""
+        },
+        {
+          "name": "",
+          "class": "logos:docker",
+          "color": ""
+        },
+        {
+          "name": "Python",
+          "class": "logos:python",
+          "color": ""
+        },
+        {
+          "name": "",
+          "class": "logos:aws",
+          "color": ""
+        }
+      ],
+      "english": {
+        "title": "Software Engineer III - Computer Vision",
+        "description": [
+          "In charge of a large-scale image processing pipeline in the cloud, which has processed 3 PBs (~3000 mesoscale whole-brains) at the moment.",
+          "Retrospective flatfield correction applied to large-scale data (hundreds of GBs to many TBs).",
+          "Development of a template to be able to register brains acquired from light-sheet imaging to the Common Coordinate Framework (CCF).",
+          "Large-scale mRNA identification using cloud computing resources.",
+          "Large-scale deep learning cell segmentation using cloud computing resources.",
+          "Large-scale cell deep learning detection (ZYX positions) in brain acquired with lightsheet microscopes.",
+          "Foundational model for brain imaging data from lightsheet microscopy.",
+          "Deep learning model for Bassoon and PSD95 protein prediction (neuronal synapse) from pan-protein signal."
+        ]
+      },
+      "spanish": {
+        "title": "Desarrollador de software III - Visión por computadora",
+        "description": [
+          "Responsable de un sistema de procesamiento de imágenes a gran escala en la nube, que actualmente ha procesado 3 PBs.",
+          "Corrección retrospectiva de campo plano aplicada a datos a gran escala (de cientos de GB a muchos TB).",
+          "Desarrollo de una plantilla para registrar cerebros adquiridos mediante microscopía de lámina de luz en el Marco de Coordenadas Comunes (CCF).",
+          "Identificación de ARNm a gran escala mediante recursos de computación en la nube.",
+          "Segmentación celular a gran escala mediante aprendizaje profundo con recursos de computación en la nube.",
+          "Detección celular a gran escala mediante aprendizaje profundo (posiciones ZYX) en cerebros adquiridos con microscopios de lámina de luz.",
+          "Modelo fundamental para datos de imágenes cerebrales de microscopía de lámina de luz.",
+          "Modelo de aprendizaje profundo para la predicción de proteínas Bassoon y PSD95 (sinapsis neuronal) a partir de canales de pan-proteínas."
+        ]
+      }
+    },
+    {
+      "startDate": "07/2022",
+      "endDate": "10/2023",
+      "location": "Seattle, WA, USA",
+      "images": [],
+      "organization": "Allen Institute for Neural Dynamics",
+      "technologies": [
+        {
+          "name": "Neuroscience",
+          "class": "twemoji:brain",
+          "color": ""
+        },
+        {
+          "name": "",
+          "class": "logos:pytorch",
+          "color": ""
+        },
+        {
+          "name": "NextFlow",
+          "class": "vscode-icons:file-type-nextflow",
+          "color": ""
+        },
+        {
+          "name": "",
+          "class": "logos:docker",
+          "color": ""
+        },
+        {
+          "name": "Python",
+          "class": "logos:python",
+          "color": ""
+        },
+        {
+          "name": "",
+          "class": "logos:aws",
+          "color": ""
+        }
+      ],
+      "english": {
+        "title": "Software Engineer II - Computer Vision",
+        "description": [
+          "Development of image processing pipelines for light-sheet microscope images using Code Ocean and AWS.",
+          "Some of the image processing steps are: destriping, 3D reconstruction, format image conversion to OME-Zarr, atlas registration, and explorative analysis on cell segmentation and mRNA detection.",
+          "Development of a bioimage analysis software package to estimate stitching errors in large-scale microscopy datasets.",
+          "Automated data upload to AWS using a HPC cluster.",
+          "Working with large-scale data from hundreds of GBs to many TBs from very high-resolution microscopes."
+        ]
+      },
+      "spanish": {
+        "title": "Desarrollador de software",
+        "description": [
+          "Desarrollo de flujos de trabajo de procesamiento de imágenes para imágenes de microscopio de lámina de luz utilizando Code Ocean y AWS.",
+          "Algunos de los pasos del procesamiento de imágenes son: eliminación de bandas, reconstrucción 3D, conversión de formato de imagen a OME-Zarr, registro de atlas y análisis exploratorio sobre segmentación celular y detección de ARN.",
+          "Desarrollo de un paquete de software de análisis de bioimágenes para estimar errores de unión en conjuntos de datos de microscopía a gran escala.",
+          "Carga automatizada de datos a AWS mediante un clúster HPC.",
+          "Trabajo con datos a gran escala desde cientos de GB hasta muchos TB de microscopios de muy alta resolución."
+        ]
+      }
+    },
+    {
+      "startDate": "04/2021",
+      "endDate": "06/2022",
+      "location": "Barranquilla, Colombia",
+      "images": [],
+      "organization": "Technological Instutute of Soledad Atlantico - ITSA",
+      "technologies": [
+        {
+          "name": "Linux",
+          "class": "logos:linux-tux",
+          "color": ""
+        },
+        {
+          "name": "Python",
+          "class": "logos:python",
+          "color": ""
+        },
+        {
+          "name": "FreeSurfer",
+          "class": "twemoji:brain",
+          "color": ""
+        },
+        {
+          "name": "FastSurfer",
+          "class": "openmoji:musicbrainz",
+          "color": ""
+        }
+      ],
+      "english": {
+        "title": "Software Developer",
+        "description": [
+          "Software Developer in a Multiparametric Intelligent System for the recognition of patterns associated with neurocognitive dysfunctions in young people",
+          "Reviewed the state of the art tools for the segmentation of brain anatomical structures",
+          "Installation of tools on Linux environments",
+          "Developed the intermediary module in Python for the automatic use of brain image segmentation tools"
+        ]
+      },
+      "spanish": {
+        "title": "Desarrollador de software",
+        "description": [
+          "Desarrollo una plataforma web basada en realidad virtual no inmersiva para la optimización de tiempo y recursos de la empresa Ladys Confecciones S.A.S. ",
+          "Desarrollo de un visualizador 3D optimizado en memoria para la personalización de ropa usando Three.js ",
+          "Implementación y despliegue del módulo de personalización de prendas en 3D",
+          "Elegido mejor proyecto de innovación por SENA INNOVA en Colombia en 2019-2020"
+        ]
+      }
+    },
+    {
+      "startDate": "10/2021",
+      "endDate": "04/2022",
+      "location": "Cartagena, Colombia",
+      "images": [],
+      "organization": "Cotecmar",
+      "technologies": [
+        {
+          "name": "Digital Libraries",
+          "class": "noto:books",
+          "color": ""
+        },
+        {
+          "name": "Python",
+          "class": "logos:python",
+          "color": ""
+        },
+        {
+          "name": "Excel",
+          "class": "vscode-icons:file-type-excel",
+          "color": ""
+        }
+      ],
+      "english": {
+        "title": "Research Associate",
+        "description": [
+          "Designed a calculation tool based on simulation software that allows a technical analysis of electromobility solutions for rail-river transport",
+          "Provided support and analysis of dual-use technologies incorporating electromobility technologies available in the Colombian and international market, identifying the map of actors, costs of the proposals, and those responsible for the actions and the time required for their materialization"
+        ]
+      },
+      "spanish": {
+        "title": "Research Associate",
+        "description": [
+          "Desarrollo una plataforma web basada en realidad virtual no inmersiva para la optimización de tiempo y recursos de la empresa Ladys Confecciones S.A.S. ",
+          "Desarrollo de un visualizador 3D optimizado en memoria para la personalización de ropa usando Three.js ",
+          "Implementación y despliegue del módulo de personalización de prendas en 3D",
+          "Elegido mejor proyecto de innovación por SENA INNOVA en Colombia en 2019-2020"
+        ]
+      }
+    },
+    {
+      "startDate": "09/2020",
+      "endDate": "03/2021",
+      "location": "Medellín, Colombia",
+      "images": [],
+      "organization": "National University of Colombia",
+      "technologies": [
+        {
+          "name": "Azure Datafactory",
+          "class": "vscode-icons:file-type-azure",
+          "color": ""
+        },
+        {
+          "name": "Azure Databricks",
           "class": "simple-icons:databricks",
           "color": "orangered"
         },
         {
-          "name": "Numpy",
-          "class": "logos:numpy",
+          "name": "MySql",
+          "class": "logos:mysql",
           "color": ""
         },
         {
-          "name": "scikitlearn",
-          "class": "simple-icons:scikitlearn",
-          "color": "white"
-        },
-        {
-          "name": "JavaScript",
-          "class": "logos:javascript",
+          "name": "Python",
+          "class": "logos:python",
           "color": ""
         },
         {
-          "name": "React",
-          "class": "logos:react",
+          "name": "Scala",
+          "class": "logos:scala",
+          "color": ""
+        },
+        {
+          "name": "Azure Power Apps",
+          "class": "mdi:microsoft-azure",
+          "color": "purple"
+        }
+      ],
+      "english": {
+        "title": "Data Engineer",
+        "description": [
+          "Implementation of a Geoscientific Data Lake for the Servicio Geológico Colombiano (SGC)",
+          "ETL process development with Azure Datafactory and Azure Databricks",
+          "App Development in Power Apps",
+          "Processing hundreds of GBs of geoscientific data"
+        ]
+      },
+      "spanish": {
+        "title": "Ingeniero de datos",
+        "description": [
+          "Desarrollo una plataforma web basada en realidad virtual no inmersiva para la optimización de tiempo y recursos de la empresa Ladys Confecciones S.A.S. ",
+          "Desarrollo de un visualizador 3D optimizado en memoria para la personalización de ropa usando Three.js ",
+          "Implementación y despliegue del módulo de personalización de prendas en 3D",
+          "Elegido mejor proyecto de innovación por SENA INNOVA en Colombia en 2019-2020"
+        ]
+      }
+    },
+    {
+      "startDate": "07/2020",
+      "endDate": "05/2021",
+      "location": "Santa Marta, Colombia",
+      "images": [],
+      "organization": "Ladys Confecciones S.A.S.",
+      "technologies": [
+        {
+          "name": "Laravel",
+          "class": "logos:laravel",
           "color": ""
         },
         {
@@ -625,19 +705,106 @@
           "color": ""
         },
         {
-          "name": "Laravel",
-          "class": "logos:laravel",
-          "color": ""
-        },
-        {
           "name": "MySql",
           "class": "logos:mysql",
           "color": ""
         },
         {
-          "name": "And more...",
-          "class": "bi:three-dots",
-          "color": "white"
+          "name": "JavaScript",
+          "class": "logos:javascript",
+          "color": ""
         }
-    ]
+      ],
+      "english": {
+        "title": "Web Developer",
+        "description": [
+          "Developed a web platform based on non-immersive virtual reality for the optimization of time and resources of the company Ladys Confecciones S.A.S.",
+          "Developed a memory-optimized 3D visualizer for clothing customization using Three.js",
+          "Implemented and deployed the 3D garment customization module",
+          "Named the best innovation project by SENA INNOVA in Colombia in 2019-2020"
+        ]
+      },
+      "spanish": {
+        "title": "Desarrollador Web",
+        "description": [
+          "Desarrollo una plataforma web basada en realidad virtual no inmersiva para la optimización de tiempo y recursos de la empresa Ladys Confecciones S.A.S. ",
+          "Desarrollo de un visualizador 3D optimizado en memoria para la personalización de ropa usando Three.js ",
+          "Implementación y despliegue del módulo de personalización de prendas en 3D",
+          "Elegido mejor proyecto de innovación por SENA INNOVA en Colombia en 2019-2020"
+        ]
+      }
+    }
+  ],
+  "skills": [
+    {
+      "name": "Python",
+      "class": "logos:python",
+      "color": ""
+    },
+    {
+      "name": "NextFlow",
+      "class": "vscode-icons:file-type-nextflow",
+      "color": ""
+    },
+    {
+      "name": "Docker",
+      "class": "devicon:docker",
+      "color": ""
+    },
+    {
+      "name": "AWS",
+      "class": "skill-icons:aws-dark",
+      "color": ""
+    },
+    {
+      "name": "Distributed Computing (SLURM)",
+      "class": "ant-design:cluster-outlined",
+      "color": "white"
+    },
+    {
+      "name": "Tensorflow",
+      "class": "logos:tensorflow",
+      "color": ""
+    },
+    {
+      "name": "Pytorch",
+      "class": "skill-icons:pytorch-dark",
+      "color": ""
+    },
+    {
+      "name": "Databricks",
+      "class": "simple-icons:databricks",
+      "color": "orangered"
+    },
+    {
+      "name": "Numpy",
+      "class": "logos:numpy",
+      "color": ""
+    },
+    {
+      "name": "Dask",
+      "class": "simple-icons:dask",
+      "color": "orangered"
+    },
+    {
+      "name": "scikitlearn",
+      "class": "skill-icons:scikitlearn-dark",
+      "color": ""
+    },
+    {
+      "name": "Scipy",
+      "class": "simple-icons:scipy",
+      "color": "lightblue"
+    },
+    {
+      "name": "C/C++",
+      "class": "streamline-logos:c-language-logo-solid",
+      "color": "white"
+    },
+    {
+      "name": "And more...",
+      "class": "bi:three-dots",
+      "color": "white"
+    }
+  ]
 }
