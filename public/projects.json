@@ -2,7 +2,7 @@
   "featured_projects": [
     {
       "id": "protein-prediction",
-      "title": "Label-free Prediction of Protein Localization from Structural Signals in Lightsheet Microscopy Using a Cloud-Based Workflow",
+      "title": "Label-free Protein Localization from Structural Signals in Lightsheet Microscopy Using a Cloud-Based Workflow",
       "category": ["research", "deep-learning"],
       "featured": true,
       "status": "in-progress",
@@ -23,6 +23,7 @@
       ],
       "highlights": [
         "Neural synapse localization",
+        "Completely data-driven approach",
         "Scalable prediction of proteins",
         "Bassoon and PSD95 proteins",
         "Large-scale lightsheet data"
